@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811327B8565000B1AD3B /* AuthTextField.swift */; };
 		3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE727ABE573005EE388 /* AppDelegate.swift */; };
 		3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */; };
 		3F7E7CEC27ABE573005EE388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CEB27ABE573005EE388 /* ViewController.swift */; };
@@ -14,9 +15,21 @@
 		3F7E7CF427ABE573005EE388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */; };
 		3FDB811027B855F300B1AD3B /* Piazzolla-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FDB810F27B855F300B1AD3B /* Piazzolla-Light.ttf */; };
 		3FDB811227B855FC00B1AD3B /* Piazzolla-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FDB811127B855FC00B1AD3B /* Piazzolla-Medium.ttf */; };
-		3FDB811427B8565000B1AD3B /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811327B8565000B1AD3B /* AuthTextField.swift */; };
 		3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811527B85A2400B1AD3B /* Resources.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F52E95227B972A200637ABF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F7E7CE427ABE573005EE388 /* Relax App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Relax App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +59,6 @@
 		3F7E7CDB27ABE573005EE388 = {
 			isa = PBXGroup;
 			children = (
-				3FDB811527B85A2400B1AD3B /* Resources.swift */,
 				3F7E7CE627ABE573005EE388 /* Relax App */,
 				3F7E7CE527ABE573005EE388 /* Products */,
 			);
@@ -63,15 +75,16 @@
 		3F7E7CE627ABE573005EE388 /* Relax App */ = {
 			isa = PBXGroup;
 			children = (
+				3FDB811527B85A2400B1AD3B /* Resources.swift */,
 				3F7E7CE727ABE573005EE388 /* AppDelegate.swift */,
 				3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */,
 				3F7E7CEB27ABE573005EE388 /* ViewController.swift */,
 				3F7E7CF027ABE573005EE388 /* Assets.xcassets */,
+				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
 				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
 				3F7E7CF527ABE573005EE388 /* Info.plist */,
 				3FDB810F27B855F300B1AD3B /* Piazzolla-Light.ttf */,
 				3FDB811127B855FC00B1AD3B /* Piazzolla-Medium.ttf */,
-				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
 			);
 			path = "Relax App";
 			sourceTree = "<group>";
@@ -86,6 +99,7 @@
 				3F7E7CE027ABE573005EE388 /* Sources */,
 				3F7E7CE127ABE573005EE388 /* Frameworks */,
 				3F7E7CE227ABE573005EE388 /* Resources */,
+				3F52E95227B972A200637ABF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,7 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E7CEC27ABE573005EE388 /* ViewController.swift in Sources */,
-				3FDB811427B8565000B1AD3B /* AuthTextField.swift in Sources */,
+				3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */,
 				3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */,
 				3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */,
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
@@ -288,6 +302,7 @@
 		3F7E7CF927ABE573005EE388 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +323,7 @@
 		3F7E7CFA27ABE573005EE388 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,43 +1,73 @@
 //
-//  AuthTextField.swift
-//  Relax App
+//  ViewController.swift
+//  AuthTextField
 //
-//  Created by Ivan Budovich on 2/12/22.
+//  Created by Ivan Budovich on 2/3/22.
 //
-
 import SwiftUI
-
 struct AuthTextField: View {
+    
+    let isSecure: Bool
     @Binding var text: String
-    var placeholder: String
+    let placeholder: String
     var body: some View {
-        HStack {
-            PackedTextField(text: $text, placeholder: placeholder)
-                .foregroundColor(.sanMarino)
-                .font(.gnuolane(size: 26))
-                .accentColor(.sanMarino)
+        VStack {
+            PackedTextField(text: $text, placeholder: "", isSecure: isSecure)
+                .font(Font.piazzollaMedium(size: 18))
+                .accentColor(Color.grannySmith)
+                .placeholder(when: text.isEmpty) {
+                    Text(placeholder)
+                        .font(Font.piazzollaLight(size: 18))
+                        .foregroundColor(Color.grannySmith.opacity(0.5))
+                }
+                .padding(.horizontal, 5)
+            Color.grannySmith
+                .frame(maxWidth: .infinity, maxHeight: 2, alignment: .center)
         }
         .padding()
+        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+    }
+    
+    
+}
+
+struct AuthTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            
+            AuthTextField(isSecure: false, text: .constant(""), placeholder: "Username")
+            AuthTextField(isSecure: true, text: .constant(""), placeholder: "Password")
+            
+        }
+        .background(Color.outerSpace)
         
         
     }
 }
 
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
+    }
+}
 
 struct PackedTextField: View {
     @Binding var text: String
-    var placeholder: LocalizedStringKey
-    
+    var placeholder: String
+    let isSecure: Bool
     var body: some View {
-        if #available(iOS 15.0, *) {
-            TextField(placeholder, text: $text, prompt: Text(placeholder))
-        } else {
-            TextField(placeholder, text: $text)
+        if isSecure {
+            SecureField("", text: $text)
         }
-    }
-}
-struct AuthTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthTextField(text: .constant("Hello"), placeholder: "Password")
+        else {
+            TextField("", text: $text)
+        }
     }
 }
