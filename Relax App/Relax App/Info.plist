@@ -23,7 +23,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Piazzolla-Medium.ttf</string>
-		<string>Piazzolla-Light.ttf</string>
+		<string>Piazzolla-Bold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

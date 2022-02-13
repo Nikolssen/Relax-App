@@ -10,12 +10,12 @@ import UIKit
 import SwiftUI
 
 extension Font {
-    static func piazzollaLight(size: CGFloat) -> Font {
-        Font.custom("Piazzolla-Light", size: size)
-    }
-    
     static func piazzollaMedium(size: CGFloat) -> Font {
         Font.custom("Piazzolla-Medium", size: size)
+    }
+    
+    static func piazzollaBold(size: CGFloat) -> Font {
+        Font.custom("Piazzolla-Bold", size: size)
     }
 }
 
@@ -83,5 +83,9 @@ extension Image {
     
     static var hamburger: Image {
         Image("hamburger")
+    }
+    
+    static var lotus: Image {
+        Image("lotus")
     }
 }

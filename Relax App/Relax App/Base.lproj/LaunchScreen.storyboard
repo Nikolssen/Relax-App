@@ -20,24 +20,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-woods" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-HY-4Wl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mGH-S8-3xU">
-                                <rect key="frame" x="15" y="274" width="384" height="358"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus" translatesAutoresizingMaskIntoConstraints="NO" id="mGH-S8-3xU">
+                                <rect key="frame" x="65" y="197" width="284" height="512"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="top" secondItem="BDm-HY-4Wl" secondAttribute="top" id="44U-R9-oQh"/>
+                            <constraint firstItem="mGH-S8-3xU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4CR-L5-fi5"/>
+                            <constraint firstItem="mGH-S8-3xU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="BV7-Os-rbq"/>
                             <constraint firstItem="BDm-HY-4Wl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KRQ-dX-z9T"/>
-                            <constraint firstItem="mGH-S8-3xU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LjN-0U-88H"/>
                             <constraint firstItem="BDm-HY-4Wl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QMt-q2-U38"/>
                             <constraint firstItem="BDm-HY-4Wl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ROT-KQ-WlY"/>
                             <constraint firstItem="mGH-S8-3xU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WbD-Bc-dEP"/>
                             <constraint firstAttribute="trailing" secondItem="BDm-HY-4Wl" secondAttribute="trailing" id="ecp-Dc-SPz"/>
                             <constraint firstItem="BDm-HY-4Wl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="kZE-vT-zht"/>
-                            <constraint firstItem="mGH-S8-3xU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="230" id="oDe-jC-k1Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="BDm-HY-4Wl" secondAttribute="top" constant="44" id="p0F-lN-LOe"/>
-                            <constraint firstItem="mGH-S8-3xU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="pmQ-yN-ZVv"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,7 +48,7 @@
     </scenes>
     <resources>
         <image name="background-woods" width="1429" height="2541"/>
-        <image name="logo" width="375" height="453"/>
+        <image name="lotus" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811327B8565000B1AD3B /* AuthTextField.swift */; };
+		3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95A27B973E700637ABF /* BoldButton.swift */; };
+		3F52E95D27B9773A00637ABF /* Piazzolla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52E95C27B9773A00637ABF /* Piazzolla-Bold.ttf */; };
+		3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95E27B977D800637ABF /* OnboardingView.swift */; };
 		3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE727ABE573005EE388 /* AppDelegate.swift */; };
 		3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */; };
-		3F7E7CEC27ABE573005EE388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CEB27ABE573005EE388 /* ViewController.swift */; };
 		3F7E7CF127ABE573005EE388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E7CF027ABE573005EE388 /* Assets.xcassets */; };
 		3F7E7CF427ABE573005EE388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */; };
-		3FDB811027B855F300B1AD3B /* Piazzolla-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FDB810F27B855F300B1AD3B /* Piazzolla-Light.ttf */; };
 		3FDB811227B855FC00B1AD3B /* Piazzolla-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FDB811127B855FC00B1AD3B /* Piazzolla-Medium.ttf */; };
 		3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811527B85A2400B1AD3B /* Resources.swift */; };
 /* End PBXBuildFile section */
@@ -32,14 +33,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F52E95A27B973E700637ABF /* BoldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldButton.swift; sourceTree = "<group>"; };
+		3F52E95C27B9773A00637ABF /* Piazzolla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Piazzolla-Bold.ttf"; sourceTree = "<group>"; };
+		3F52E95E27B977D800637ABF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		3F7E7CE427ABE573005EE388 /* Relax App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Relax App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E7CE727ABE573005EE388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F7E7CEB27ABE573005EE388 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F7E7CF027ABE573005EE388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F7E7CF327ABE573005EE388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F7E7CF527ABE573005EE388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FDB810F27B855F300B1AD3B /* Piazzolla-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Piazzolla-Light.ttf"; sourceTree = "<group>"; };
 		3FDB811127B855FC00B1AD3B /* Piazzolla-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Piazzolla-Medium.ttf"; sourceTree = "<group>"; };
 		3FDB811327B8565000B1AD3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		3FDB811527B85A2400B1AD3B /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -78,13 +80,14 @@
 				3FDB811527B85A2400B1AD3B /* Resources.swift */,
 				3F7E7CE727ABE573005EE388 /* AppDelegate.swift */,
 				3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */,
-				3F7E7CEB27ABE573005EE388 /* ViewController.swift */,
 				3F7E7CF027ABE573005EE388 /* Assets.xcassets */,
 				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
+				3F52E95A27B973E700637ABF /* BoldButton.swift */,
 				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
 				3F7E7CF527ABE573005EE388 /* Info.plist */,
-				3FDB810F27B855F300B1AD3B /* Piazzolla-Light.ttf */,
 				3FDB811127B855FC00B1AD3B /* Piazzolla-Medium.ttf */,
+				3F52E95C27B9773A00637ABF /* Piazzolla-Bold.ttf */,
+				3F52E95E27B977D800637ABF /* OnboardingView.swift */,
 			);
 			path = "Relax App";
 			sourceTree = "<group>";
@@ -148,8 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E7CF427ABE573005EE388 /* LaunchScreen.storyboard in Resources */,
+				3F52E95D27B9773A00637ABF /* Piazzolla-Bold.ttf in Resources */,
 				3F7E7CF127ABE573005EE388 /* Assets.xcassets in Resources */,
-				3FDB811027B855F300B1AD3B /* Piazzolla-Light.ttf in Resources */,
 				3FDB811227B855FC00B1AD3B /* Piazzolla-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,11 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7E7CEC27ABE573005EE388 /* ViewController.swift in Sources */,
+				3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */,
 				3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */,
 				3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */,
 				3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */,
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
+				3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

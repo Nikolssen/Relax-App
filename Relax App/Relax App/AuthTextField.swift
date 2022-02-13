@@ -13,16 +13,16 @@ struct AuthTextField: View {
     var body: some View {
         VStack {
             PackedTextField(text: $text, placeholder: "", isSecure: isSecure)
-                .font(Font.piazzollaMedium(size: 18))
+                .font(Font.piazzollaBold(size: 18))
                 .accentColor(Color.grannySmith)
                 .placeholder(when: text.isEmpty) {
                     Text(placeholder)
-                        .font(Font.piazzollaLight(size: 18))
+                        .font(Font.piazzollaMedium(size: 18))
                         .foregroundColor(Color.grannySmith.opacity(0.5))
                 }
                 .padding(.horizontal, 5)
             Color.grannySmith
-                .frame(maxWidth: .infinity, maxHeight: 2, alignment: .center)
+                .frame(maxWidth: .infinity, maxHeight: 1.4, alignment: .center)
         }
         .padding()
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
