@@ -11,6 +11,7 @@
 		3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95A27B973E700637ABF /* BoldButton.swift */; };
 		3F52E95D27B9773A00637ABF /* Piazzolla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52E95C27B9773A00637ABF /* Piazzolla-Bold.ttf */; };
 		3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95E27B977D800637ABF /* OnboardingView.swift */; };
+		3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E96227B9809000637ABF /* AuthorizationView.swift */; };
 		3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE727ABE573005EE388 /* AppDelegate.swift */; };
 		3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */; };
 		3F7E7CF127ABE573005EE388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E7CF027ABE573005EE388 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		3F52E95A27B973E700637ABF /* BoldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldButton.swift; sourceTree = "<group>"; };
 		3F52E95C27B9773A00637ABF /* Piazzolla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Piazzolla-Bold.ttf"; sourceTree = "<group>"; };
 		3F52E95E27B977D800637ABF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		3F52E96227B9809000637ABF /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		3F7E7CE427ABE573005EE388 /* Relax App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Relax App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E7CE727ABE573005EE388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F52E96427B989F900637ABF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
+				3F52E95E27B977D800637ABF /* OnboardingView.swift */,
+				3F52E96227B9809000637ABF /* AuthorizationView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3F52E96527B98A1600637ABF /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
+				3F52E95A27B973E700637ABF /* BoldButton.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		3F52E96627B98A2F00637ABF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F7E7CF027ABE573005EE388 /* Assets.xcassets */,
+				3FDB811527B85A2400B1AD3B /* Resources.swift */,
+				3FDB811127B855FC00B1AD3B /* Piazzolla-Medium.ttf */,
+				3F52E95C27B9773A00637ABF /* Piazzolla-Bold.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3F52E96727B98A4900637ABF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F7E7CE727ABE573005EE388 /* AppDelegate.swift */,
+				3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		3F7E7CDB27ABE573005EE388 = {
 			isa = PBXGroup;
 			children = (
@@ -77,17 +118,11 @@
 		3F7E7CE627ABE573005EE388 /* Relax App */ = {
 			isa = PBXGroup;
 			children = (
-				3FDB811527B85A2400B1AD3B /* Resources.swift */,
-				3F7E7CE727ABE573005EE388 /* AppDelegate.swift */,
-				3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */,
-				3F7E7CF027ABE573005EE388 /* Assets.xcassets */,
-				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
-				3F52E95A27B973E700637ABF /* BoldButton.swift */,
-				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
+				3F52E96727B98A4900637ABF /* AppDelegate */,
+				3F52E96627B98A2F00637ABF /* Resources */,
+				3F52E96527B98A1600637ABF /* Custom View */,
+				3F52E96427B989F900637ABF /* Screens */,
 				3F7E7CF527ABE573005EE388 /* Info.plist */,
-				3FDB811127B855FC00B1AD3B /* Piazzolla-Medium.ttf */,
-				3F52E95C27B9773A00637ABF /* Piazzolla-Bold.ttf */,
-				3F52E95E27B977D800637ABF /* OnboardingView.swift */,
 			);
 			path = "Relax App";
 			sourceTree = "<group>";
@@ -169,6 +204,7 @@
 				3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */,
 				3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */,
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
+				3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */,
 				3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,8 @@ struct AuthTextField: View {
         VStack {
             PackedTextField(text: $text, placeholder: "", isSecure: isSecure)
                 .font(Font.piazzollaBold(size: 18))
-                .accentColor(Color.grannySmith)
+                .accentColor(Color.white)
+                .foregroundColor(Color.white)
                 .placeholder(when: text.isEmpty) {
                     Text(placeholder)
                         .font(Font.piazzollaMedium(size: 18))

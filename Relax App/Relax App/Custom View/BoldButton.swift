@@ -19,7 +19,6 @@ struct BoldButton: View {
         }
         .background(Color.grannySmith.opacity(0.8))
         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-        .padding(.horizontal, 30)
     }
 }
 

@@ -32,6 +32,7 @@ struct OnboardingView: View {
                 .font(Font.piazzollaMedium(size: 18))
                 
                 BoldButton(title: Constants.buttonTitle, action: {})
+                    .padding(.horizontal, 30)
                 Button(Constants.registerTitle, action: {})
                     .foregroundColor(Color.white)
                     .font(Font.piazzollaMedium(size: 18))
