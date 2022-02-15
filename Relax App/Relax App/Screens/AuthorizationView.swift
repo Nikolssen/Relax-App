@@ -25,10 +25,9 @@ struct AuthorizationView: View {
                             .frame(width: 48, height: 48, alignment: .leading)
                             .foregroundColor(Color.white)
                         Text(Constants.signInTitle)
-                            .font(Font.piazzollaBold(size: 24))
+                            .font(Font.alegreyaMedium(size: 30))
                             .foregroundColor(Color.white)
                     }
-                    .padding(30)
                     Spacer()
                 }
                 Spacer()
@@ -41,13 +40,13 @@ struct AuthorizationView: View {
                     BoldButton(title: Constants.signInTitle, action: {})
                     Button(Constants.registerTitle, action: {})
                         .foregroundColor(Color.white)
-                        .font(Font.piazzollaMedium(size: 18))
+                        .font(Font.alegreyaSansRegular(size: 20))
                     BoldButton(title: Constants.profilePlaceholder, action: {})
                 }
-                .padding(20)
                 
                 Spacer()
             }
+            .padding(.horizontal, 30)
             
         }
     }

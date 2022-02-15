@@ -22,8 +22,9 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Piazzolla-Medium.ttf</string>
-		<string>Piazzolla-Bold.ttf</string>
+		<string>AlegreyaSans-Regular.ttf</string>
+		<string>AlegreyaSans-Medium.ttf</string>
+		<string>Alegreya-Medium.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

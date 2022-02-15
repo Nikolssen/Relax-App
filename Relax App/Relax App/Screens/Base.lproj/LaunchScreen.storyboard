@@ -47,7 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background-woods" width="1429" height="2541"/>
+        <image name="background-woods" width="375" height="735"/>
         <image name="lotus" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

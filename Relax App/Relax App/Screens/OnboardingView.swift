@@ -21,7 +21,7 @@ struct OnboardingView: View {
                     .padding(.horizontal, 90)
                     .foregroundColor(Color.white)
                 Text(Constants.greetingTitle)
-                    .font(Font.piazzollaBold(size: 30))
+                    .font(Font.alegreyaMedium(size: 30))
                     .foregroundColor(Color.white)
                 VStack(alignment: .center, spacing: 0) {
                     Text(Constants.firstLineTitle)
@@ -29,13 +29,13 @@ struct OnboardingView: View {
                     Text(Constants.thirdLineTitle)
                 }
                 .foregroundColor(Color.white)
-                .font(Font.piazzollaMedium(size: 18))
+                .font(Font.alegreyaSansMedium(size: 18))
                 
                 BoldButton(title: Constants.buttonTitle, action: {})
                     .padding(.horizontal, 30)
                 Button(Constants.registerTitle, action: {})
                     .foregroundColor(Color.white)
-                    .font(Font.piazzollaMedium(size: 18))
+                    .font(Font.alegreyaSansMedium(size: 18))
             }
             
         }

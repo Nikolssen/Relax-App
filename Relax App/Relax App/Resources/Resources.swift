@@ -10,12 +10,16 @@ import UIKit
 import SwiftUI
 
 extension Font {
-    static func piazzollaMedium(size: CGFloat) -> Font {
-        Font.custom("Piazzolla-Medium", size: size)
+    static func alegreyaMedium(size: CGFloat) -> Font {
+        Font.custom("Alegreya-Medium", size: size)
     }
     
-    static func piazzollaBold(size: CGFloat) -> Font {
-        Font.custom("Piazzolla-Bold", size: size)
+    static func alegreyaSansMedium(size: CGFloat) -> Font {
+        Font.custom("AlegreyaSans-Medium", size: size)
+    }
+    
+    static func alegreyaSansRegular(size: CGFloat) -> Font {
+        Font.custom("AlegreyaSans-Regular", size: size)
     }
 }
 
@@ -27,6 +31,10 @@ extension Color {
     static var outerSpace: Color {
         Color("Outer Space")
     }
+    
+    static var silverSand: Color {
+        Color("Silver Sand")
+    }
 }
 
 extension UIColor {
@@ -36,6 +44,10 @@ extension UIColor {
     
     static var outerSpace: UIColor {
         UIColor(named: "Outer Space")!
+    }
+    
+    static var silverSand: UIColor {
+        UIColor(named: "Silver Sand")!
     }
 }
 
