@@ -35,6 +35,10 @@ extension Color {
     static var silverSand: Color {
         Color("Silver Sand")
     }
+    
+    static var springWood: Color {
+        Color("Spring Wood")
+    }
 }
 
 extension UIColor {
@@ -49,9 +53,53 @@ extension UIColor {
     static var silverSand: UIColor {
         UIColor(named: "Silver Sand")!
     }
+    
+    static var springWood: UIColor {
+        UIColor(named: "Spring Wood")!
+    }
 }
 
 extension Image {
+    enum Signs {
+        static var aries: Image {
+            Image("Aries")
+        }
+        static var taurus: Image {
+            Image("Taurus")
+        }
+        
+        static var gemini: Image {
+            Image("Gemini")
+        }
+        static var cancer: Image {
+            Image("Cancer")
+        }
+        static var leo: Image {
+            Image("Leo")
+        }
+        static var virgo: Image {
+            Image("Virgo")
+        }
+        static var libra: Image {
+            Image("Libra")
+        }
+        static var scorpio: Image {
+            Image("Scorpio")
+        }
+        static var sagittarius: Image {
+            Image("Sagittarius")
+        }
+        static var capricorn: Image {
+            Image("Capricorn")
+        }
+        static var aquarius: Image {
+            Image("Aquarius")
+        }
+        static var pisces: Image {
+            Image("Pisces")
+        }
+    }
+    
     enum Emotions {
         static var calm: Image {
             Image("calm")
@@ -68,6 +116,10 @@ extension Image {
         
         static var lightning: Image {
             Image("lightning")
+        }
+        
+        static var whirl: Image {
+            Image("whirl")
         }
     }
     

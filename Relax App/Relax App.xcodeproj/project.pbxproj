@@ -10,15 +10,22 @@
 		3F2FA66327BC37080081A5CB /* Alegreya-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FA66227BC37080081A5CB /* Alegreya-Medium.ttf */; };
 		3F2FA66527BC373C0081A5CB /* AlegreyaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FA66427BC373C0081A5CB /* AlegreyaSans-Medium.ttf */; };
 		3F2FA66727BC37410081A5CB /* AlegreyaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FA66627BC37410081A5CB /* AlegreyaSans-Regular.ttf */; };
+		3F2FA66927BC3BDE0081A5CB /* Moodlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FA66827BC3BDE0081A5CB /* Moodlet.swift */; };
 		3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811327B8565000B1AD3B /* AuthTextField.swift */; };
 		3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95A27B973E700637ABF /* BoldButton.swift */; };
 		3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95E27B977D800637ABF /* OnboardingView.swift */; };
 		3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E96227B9809000637ABF /* AuthorizationView.swift */; };
+		3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */; };
+		3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */; };
+		3F62DA2D27BD04760048A624 /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DA2C27BD04760048A624 /* MeditationView.swift */; };
+		3F62DA2F27BD0F550048A624 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DA2E27BD0F550048A624 /* UserView.swift */; };
 		3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE727ABE573005EE388 /* AppDelegate.swift */; };
 		3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */; };
 		3F7E7CF127ABE573005EE388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E7CF027ABE573005EE388 /* Assets.xcassets */; };
 		3F7E7CF427ABE573005EE388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */; };
 		3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811527B85A2400B1AD3B /* Resources.swift */; };
+		3FFA5F8E27BC3DF00091C531 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5F8D27BC3DF00091C531 /* Emotion.swift */; };
+		3FFA5F9227BC42CE0091C531 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5F9127BC42CE0091C531 /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,9 +45,14 @@
 		3F2FA66227BC37080081A5CB /* Alegreya-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Medium.ttf"; sourceTree = "<group>"; };
 		3F2FA66427BC373C0081A5CB /* AlegreyaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Medium.ttf"; sourceTree = "<group>"; };
 		3F2FA66627BC37410081A5CB /* AlegreyaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Regular.ttf"; sourceTree = "<group>"; };
+		3F2FA66827BC3BDE0081A5CB /* Moodlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moodlet.swift; sourceTree = "<group>"; };
 		3F52E95A27B973E700637ABF /* BoldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldButton.swift; sourceTree = "<group>"; };
 		3F52E95E27B977D800637ABF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		3F52E96227B9809000637ABF /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeSign.swift; sourceTree = "<group>"; };
+		3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodletRepresentable.swift; sourceTree = "<group>"; };
+		3F62DA2C27BD04760048A624 /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
+		3F62DA2E27BD0F550048A624 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		3F7E7CE427ABE573005EE388 /* Relax App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Relax App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E7CE727ABE573005EE388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,8 @@
 		3F7E7CF527ABE573005EE388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDB811327B8565000B1AD3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		3FDB811527B85A2400B1AD3B /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		3FFA5F8D27BC3DF00091C531 /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		3FFA5F9127BC42CE0091C531 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +79,7 @@
 		3F52E96427B989F900637ABF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3FFA5F9127BC42CE0091C531 /* DashboardView.swift */,
 				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
 				3F52E95E27B977D800637ABF /* OnboardingView.swift */,
 				3F52E96227B9809000637ABF /* AuthorizationView.swift */,
@@ -77,6 +92,9 @@
 			children = (
 				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
 				3F52E95A27B973E700637ABF /* BoldButton.swift */,
+				3F2FA66827BC3BDE0081A5CB /* Moodlet.swift */,
+				3F62DA2C27BD04760048A624 /* MeditationView.swift */,
+				3F62DA2E27BD0F550048A624 /* UserView.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -126,6 +144,9 @@
 				3F52E96527B98A1600637ABF /* Custom View */,
 				3F52E96427B989F900637ABF /* Screens */,
 				3F7E7CF527ABE573005EE388 /* Info.plist */,
+				3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */,
+				3FFA5F8D27BC3DF00091C531 /* Emotion.swift */,
+				3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */,
 			);
 			path = "Relax App";
 			sourceTree = "<group>";
@@ -204,10 +225,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */,
+				3FFA5F8E27BC3DF00091C531 /* Emotion.swift in Sources */,
+				3F62DA2D27BD04760048A624 /* MeditationView.swift in Sources */,
+				3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */,
 				3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */,
+				3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */,
 				3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */,
+				3F2FA66927BC3BDE0081A5CB /* Moodlet.swift in Sources */,
 				3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */,
+				3F62DA2F27BD0F550048A624 /* UserView.swift in Sources */,
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
+				3FFA5F9227BC42CE0091C531 /* DashboardView.swift in Sources */,
 				3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */,
 				3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */,
 			);
