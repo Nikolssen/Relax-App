@@ -36,12 +36,9 @@ struct AuthorizationView: View {
                     AuthTextField(isSecure: true, text: $password, placeholder: Constants.passwordPlaceholder)
                 }
                 Spacer()
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 20) {
                     BoldButton(title: Constants.signInTitle, action: {})
-                    Button(Constants.registerTitle, action: {})
-                        .foregroundColor(Color.white)
-                        .font(Font.alegreyaSansRegular(size: 20))
-                    BoldButton(title: Constants.profilePlaceholder, action: {})
+                    BoldButton(title: Constants.registerTitle, action: {})
                 }
                 
                 Spacer()
@@ -55,7 +52,6 @@ struct AuthorizationView: View {
         static let emailPlaceholder = "Email"
         static let passwordPlaceholder = "Password"
         static let registerTitle = "Register"
-        static let profilePlaceholder = "Profile"
     }
 }
 

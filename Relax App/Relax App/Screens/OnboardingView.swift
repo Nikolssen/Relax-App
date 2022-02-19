@@ -42,12 +42,12 @@ struct OnboardingView: View {
     }
     
     private enum Constants {
-        static let greetingTitle = "Привет".uppercased()
-        static let firstLineTitle = "Наслаждайся отборочными."
-        static let secondLineTitle = "Будь внимателен."
-        static let thirdLineTitle = "Делай хорошо."
-        static let buttonTitle = "Войти в аккаунт"
-        static let registerTitle = "Еще нет аккаунта? Зарегистрируйтесь"
+        static let greetingTitle = "Hello".uppercased()
+        static let firstLineTitle = "Enjoy qulification"
+        static let secondLineTitle = "Be attentive."
+        static let thirdLineTitle = "Do your job well"
+        static let buttonTitle = "Sign in"
+        static let registerTitle = "Don't have account yet? Register now!"
     }
 }
 
