@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MeditationView: View {
+    let advice: MeditationAdvice
     var body: some View {
         ZStack {
             Color.springWood
             HStack {
             VStack {
-                Text("Some title")
+                Text(advice.title)
                     .font(.alegreyaMedium(size: 25))
-                Text("Some long long long description")
+                Text(advice.description)
                     .font(.alegreyaSansMedium(size: 14))
                 Button(action: {}) {
                     Text("More...")
@@ -26,19 +27,15 @@ struct MeditationView: View {
                 .background(Color.outerSpace)
                 .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             }
-                Image("Meditation-Calm")
+                advice.image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: 200, maxHeight: 200, alignment: .center)
             }
         }
+        .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+        .padding(.horizontal, 10)
         
         
-    }
-}
-
-struct MeditationView_Previews: PreviewProvider {
-    static var previews: some View {
-        MeditationView()
     }
 }

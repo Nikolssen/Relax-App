@@ -28,6 +28,7 @@
 		3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811527B85A2400B1AD3B /* Resources.swift */; };
 		3FFA5F8E27BC3DF00091C531 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5F8D27BC3DF00091C531 /* Emotion.swift */; };
 		3FFA5F9227BC42CE0091C531 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5F9127BC42CE0091C531 /* DashboardView.swift */; };
+		3FFDCF5227C37C6200A73EFC /* DashboardTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		3FDB811527B85A2400B1AD3B /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		3FFA5F8D27BC3DF00091C531 /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		3FFA5F9127BC42CE0091C531 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3FFA5F9127BC42CE0091C531 /* DashboardView.swift */,
+				3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */,
 				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
 				3F52E95E27B977D800637ABF /* OnboardingView.swift */,
 				3F52E96227B9809000637ABF /* AuthorizationView.swift */,
@@ -253,6 +256,7 @@
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
 				3FFA5F9227BC42CE0091C531 /* DashboardView.swift in Sources */,
 				3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */,
+				3FFDCF5227C37C6200A73EFC /* DashboardTabView.swift in Sources */,
 				3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

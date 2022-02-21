@@ -20,8 +20,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-woods" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-HY-4Wl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus" translatesAutoresizingMaskIntoConstraints="NO" id="mGH-S8-3xU">
-                                <rect key="frame" x="65" y="197" width="284" height="512"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mGH-S8-3xU">
+                                <rect key="frame" x="65" y="94" width="284" height="718"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -36,6 +36,7 @@
                             <constraint firstItem="BDm-HY-4Wl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ROT-KQ-WlY"/>
                             <constraint firstItem="mGH-S8-3xU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WbD-Bc-dEP"/>
                             <constraint firstAttribute="trailing" secondItem="BDm-HY-4Wl" secondAttribute="trailing" id="ecp-Dc-SPz"/>
+                            <constraint firstItem="mGH-S8-3xU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="el1-Zk-mDl"/>
                             <constraint firstItem="BDm-HY-4Wl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="kZE-vT-zht"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="BDm-HY-4Wl" secondAttribute="top" constant="44" id="p0F-lN-LOe"/>
                         </constraints>
@@ -48,7 +49,7 @@
     </scenes>
     <resources>
         <image name="background-woods" width="375" height="735"/>
-        <image name="lotus" width="512" height="512"/>
+        <image name="logo" width="1600" height="945"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

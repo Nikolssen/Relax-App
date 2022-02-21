@@ -21,6 +21,7 @@ struct DashboardView: View {
                     Spacer()
                     Image.Icons.logo
                         .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 48, height: 48, alignment: .center)
                         .foregroundColor(.white)
                     Spacer()
@@ -44,6 +45,13 @@ struct DashboardView: View {
                     }
                 }
                 Spacer()
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVGrid(columns: [.init(.flexible(minimum: 100, maximum: .infinity), spacing: 20, alignment: .center)]) {
+                        MeditationView(advice: MeditationAdvice(image: Image("Meditation-Calm"), title: "Relax", description: "Some long advice"))
+                        MeditationView(advice: MeditationAdvice(image: Image("Meditation-Calm"), title: "Relax", description: "Some long advice"))
+                        MeditationView(advice: MeditationAdvice(image: Image("Meditation-Calm"), title: "Relax", description: "Some long advice"))
+                    }
+                }
             }
 
 
