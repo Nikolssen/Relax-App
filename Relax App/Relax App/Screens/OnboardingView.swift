@@ -15,7 +15,7 @@ struct OnboardingView: View {
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
             VStack {
-                Image.lotus
+                Image.Icons.logo
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.horizontal, 90)
@@ -44,7 +44,7 @@ struct OnboardingView: View {
     private enum Constants {
         static let greetingTitle = "Hello".uppercased()
         static let firstLineTitle = "Enjoy qulification"
-        static let secondLineTitle = "Be attentive."
+        static let secondLineTitle = "Be attentive"
         static let thirdLineTitle = "Do your job well"
         static let buttonTitle = "Sign in"
         static let registerTitle = "Don't have account yet? Register now!"

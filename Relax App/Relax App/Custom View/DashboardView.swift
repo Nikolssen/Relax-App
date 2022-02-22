@@ -13,23 +13,6 @@ struct DashboardView: View {
             Color.outerSpace
                 .ignoresSafeArea()
             VStack {
-                HStack {
-                    Image.hamburger
-                        .resizable()
-                        .frame(width: 23, height: 23, alignment: .center)
-                        .foregroundColor(Color.white)
-                    Spacer()
-                    Image.Icons.logo
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 48, height: 48, alignment: .center)
-                        .foregroundColor(.white)
-                    Spacer()
-                    Image.Icons.user
-                        .resizable()
-                        .frame(width: 36, height: 36, alignment: .center)
-                        .clipShape(Circle())
-                }
                 Spacer()
                 Text("Welcome back, User!")
                     .font(.alegreyaMedium(size: 30))
@@ -53,8 +36,6 @@ struct DashboardView: View {
                     }
                 }
             }
-
-
         }
     }
 }

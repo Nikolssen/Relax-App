@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F28A8DD27C54E53007ED45A /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F28A8DC27C54E53007ED45A /* NavigationBar.swift */; };
 		3F2FA66327BC37080081A5CB /* Alegreya-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FA66227BC37080081A5CB /* Alegreya-Medium.ttf */; };
 		3F2FA66527BC373C0081A5CB /* AlegreyaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FA66427BC373C0081A5CB /* AlegreyaSans-Medium.ttf */; };
 		3F2FA66727BC37410081A5CB /* AlegreyaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FA66627BC37410081A5CB /* AlegreyaSans-Regular.ttf */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F28A8DC27C54E53007ED45A /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		3F2FA66227BC37080081A5CB /* Alegreya-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Medium.ttf"; sourceTree = "<group>"; };
 		3F2FA66427BC373C0081A5CB /* AlegreyaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Medium.ttf"; sourceTree = "<group>"; };
 		3F2FA66627BC37410081A5CB /* AlegreyaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -85,7 +87,6 @@
 		3F52E96427B989F900637ABF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				3FFA5F9127BC42CE0091C531 /* DashboardView.swift */,
 				3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */,
 				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
 				3F52E95E27B977D800637ABF /* OnboardingView.swift */,
@@ -97,11 +98,13 @@
 		3F52E96527B98A1600637ABF /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				3FFA5F9127BC42CE0091C531 /* DashboardView.swift */,
 				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
 				3F52E95A27B973E700637ABF /* BoldButton.swift */,
 				3F2FA66827BC3BDE0081A5CB /* Moodlet.swift */,
 				3F62DA2C27BD04760048A624 /* MeditationView.swift */,
 				3F62DA2E27BD0F550048A624 /* UserView.swift */,
+				3F28A8DC27C54E53007ED45A /* NavigationBar.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				3F62DA2D27BD04760048A624 /* MeditationView.swift in Sources */,
 				3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */,
 				3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */,
+				3F28A8DD27C54E53007ED45A /* NavigationBar.swift in Sources */,
 				3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */,
 				3F5CF3DF27BE5FF700C95E39 /* MediationAdvice.swift in Sources */,
 				3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */,
