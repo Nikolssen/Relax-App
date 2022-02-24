@@ -16,6 +16,8 @@
 		3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95A27B973E700637ABF /* BoldButton.swift */; };
 		3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E95E27B977D800637ABF /* OnboardingView.swift */; };
 		3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E96227B9809000637ABF /* AuthorizationView.swift */; };
+		3F583FFE27C770F100015D46 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F583FFD27C770F100015D46 /* ImageCell.swift */; };
+		3F58400027C7775900015D46 /* ImageAdditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */; };
 		3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */; };
 		3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */; };
 		3F5CF3DD27BE5FDB00C95E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3DC27BE5FDB00C95E39 /* User.swift */; };
@@ -54,6 +56,8 @@
 		3F52E95A27B973E700637ABF /* BoldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldButton.swift; sourceTree = "<group>"; };
 		3F52E95E27B977D800637ABF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		3F52E96227B9809000637ABF /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		3F583FFD27C770F100015D46 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdditionCell.swift; sourceTree = "<group>"; };
 		3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeSign.swift; sourceTree = "<group>"; };
 		3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodletRepresentable.swift; sourceTree = "<group>"; };
 		3F5CF3DC27BE5FDB00C95E39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				3F62DA2C27BD04760048A624 /* MeditationView.swift */,
 				3F62DA2E27BD0F550048A624 /* UserView.swift */,
 				3F28A8DC27C54E53007ED45A /* NavigationBar.swift */,
+				3F583FFD27C770F100015D46 /* ImageCell.swift */,
+				3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */,
 				3FFA5F8E27BC3DF00091C531 /* Emotion.swift in Sources */,
 				3F62DA2D27BD04760048A624 /* MeditationView.swift in Sources */,
+				3F583FFE27C770F100015D46 /* ImageCell.swift in Sources */,
 				3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */,
 				3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */,
 				3F28A8DD27C54E53007ED45A /* NavigationBar.swift in Sources */,
@@ -260,6 +267,7 @@
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
 				3FFA5F9227BC42CE0091C531 /* DashboardView.swift in Sources */,
 				3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */,
+				3F58400027C7775900015D46 /* ImageAdditionCell.swift in Sources */,
 				3FFDCF5227C37C6200A73EFC /* DashboardTabView.swift in Sources */,
 				3F52E95F27B977D800637ABF /* OnboardingView.swift in Sources */,
 			);

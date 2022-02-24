@@ -24,7 +24,7 @@ struct DashboardTabView: View {
                     .tabItem {
                         Image.Icons.tunes
                     }
-                Text("3")
+                UserView()
                     .tag(2)
                     .tabItem {
                         Image.Icons.user
