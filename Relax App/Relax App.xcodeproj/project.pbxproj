@@ -18,6 +18,7 @@
 		3F52E96327B9809000637ABF /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E96227B9809000637ABF /* AuthorizationView.swift */; };
 		3F583FFE27C770F100015D46 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F583FFD27C770F100015D46 /* ImageCell.swift */; };
 		3F58400027C7775900015D46 /* ImageAdditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */; };
+		3F58400227C7818E00015D46 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58400127C7818E00015D46 /* PlayerView.swift */; };
 		3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */; };
 		3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */; };
 		3F5CF3DD27BE5FDB00C95E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3DC27BE5FDB00C95E39 /* User.swift */; };
@@ -58,6 +59,7 @@
 		3F52E96227B9809000637ABF /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		3F583FFD27C770F100015D46 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdditionCell.swift; sourceTree = "<group>"; };
+		3F58400127C7818E00015D46 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeSign.swift; sourceTree = "<group>"; };
 		3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodletRepresentable.swift; sourceTree = "<group>"; };
 		3F5CF3DC27BE5FDB00C95E39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				3F28A8DC27C54E53007ED45A /* NavigationBar.swift */,
 				3F583FFD27C770F100015D46 /* ImageCell.swift */,
 				3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */,
+				3F58400127C7818E00015D46 /* PlayerView.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				3F28A8DD27C54E53007ED45A /* NavigationBar.swift in Sources */,
 				3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */,
 				3F5CF3DF27BE5FF700C95E39 /* MediationAdvice.swift in Sources */,
+				3F58400227C7818E00015D46 /* PlayerView.swift in Sources */,
 				3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */,
 				3F2FA66927BC3BDE0081A5CB /* Moodlet.swift in Sources */,
 				3F5CF3DD27BE5FDB00C95E39 /* User.swift in Sources */,
