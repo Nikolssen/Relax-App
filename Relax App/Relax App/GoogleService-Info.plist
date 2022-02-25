@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>189946056154-cpfn8jtv4148b7v6p38eup24uqvvaada.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.189946056154-cpfn8jtv4148b7v6p38eup24uqvvaada</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDRGKW3kPWsS7PY2mLlLBi5EEKZeYGw4pw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>189946056154</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Budovich.Ivan.Relax-App</string>
+	<key>PROJECT_ID</key>
+	<string>meditation-app-c2d1a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>meditation-app-c2d1a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:189946056154:ios:170b86fd5d31212ac844e3</string>
+</dict>
+</plist>

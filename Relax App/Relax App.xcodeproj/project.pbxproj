@@ -26,6 +26,8 @@
 		3F62DA2D27BD04760048A624 /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DA2C27BD04760048A624 /* MeditationView.swift */; };
 		3F62DA2F27BD0F550048A624 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DA2E27BD0F550048A624 /* UserView.swift */; };
 		3F653E0027C8C8A00062B260 /* MediationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F653DFF27C8C8A00062B260 /* MediationDetailsView.swift */; };
+		3F653E0227C8CD300062B260 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F653E0127C8CD300062B260 /* GoogleService-Info.plist */; };
+		3F653E0427C8CE000062B260 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F653E0327C8CE000062B260 /* RegistrationView.swift */; };
 		3F7E7CE827ABE573005EE388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE727ABE573005EE388 /* AppDelegate.swift */; };
 		3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */; };
 		3F7E7CF127ABE573005EE388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E7CF027ABE573005EE388 /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		3F62DA2C27BD04760048A624 /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		3F62DA2E27BD0F550048A624 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		3F653DFF27C8C8A00062B260 /* MediationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediationDetailsView.swift; sourceTree = "<group>"; };
+		3F653E0127C8CD300062B260 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F653E0327C8CE000062B260 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		3F7E7CE427ABE573005EE388 /* Relax App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Relax App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E7CE727ABE573005EE388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7E7CE927ABE573005EE388 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				3F7E7CF227ABE573005EE388 /* LaunchScreen.storyboard */,
 				3F52E95E27B977D800637ABF /* OnboardingView.swift */,
 				3F52E96227B9809000637ABF /* AuthorizationView.swift */,
+				3F653E0327C8CE000062B260 /* RegistrationView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 		3F7E7CE627ABE573005EE388 /* Relax App */ = {
 			isa = PBXGroup;
 			children = (
+				3F653E0127C8CD300062B260 /* GoogleService-Info.plist */,
 				3F5CF3DB27BE5FC900C95E39 /* Models */,
 				3F52E96727B98A4900637ABF /* AppDelegate */,
 				3F52E96627B98A2F00637ABF /* Resources */,
@@ -246,6 +252,7 @@
 				3F7E7CF427ABE573005EE388 /* LaunchScreen.storyboard in Resources */,
 				3F2FA66727BC37410081A5CB /* AlegreyaSans-Regular.ttf in Resources */,
 				3F7E7CF127ABE573005EE388 /* Assets.xcassets in Resources */,
+				3F653E0227C8CD300062B260 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +265,7 @@
 			files = (
 				3F52E95B27B973E700637ABF /* BoldButton.swift in Sources */,
 				3FFA5F8E27BC3DF00091C531 /* Emotion.swift in Sources */,
+				3F653E0427C8CE000062B260 /* RegistrationView.swift in Sources */,
 				3F62DA2D27BD04760048A624 /* MeditationView.swift in Sources */,
 				3F583FFE27C770F100015D46 /* ImageCell.swift in Sources */,
 				3F653E0027C8C8A00062B260 /* MediationDetailsView.swift in Sources */,

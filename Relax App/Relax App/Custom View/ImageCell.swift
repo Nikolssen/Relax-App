@@ -14,10 +14,14 @@ struct ImageCell: View {
             Image.Backgrounds.wood
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+            HStack{
             Text("Some text")
                 .foregroundColor(.white)
                 .font(.alegreyaSansMedium(size: 18))
                 .padding(.top, 60)
+                .padding(.horizontal, 20)
+                Spacer()
+            }
         }
         .frame(maxHeight: 130, alignment: .center)
         .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
