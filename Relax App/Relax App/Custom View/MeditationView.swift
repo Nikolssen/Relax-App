@@ -16,7 +16,7 @@ struct MeditationView: View {
             VStack {
                 Text(advice.title)
                     .font(.alegreyaMedium(size: 25))
-                Text(advice.description)
+                Text(advice.shortDescription)
                     .font(.alegreyaSansMedium(size: 14))
                 Button(action: {}) {
                     Text("More...")

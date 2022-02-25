@@ -12,4 +12,5 @@ struct MeditationAdvice {
     let image: Image
     let title: String
     let description: String
+    let shortDescription: String
 }
