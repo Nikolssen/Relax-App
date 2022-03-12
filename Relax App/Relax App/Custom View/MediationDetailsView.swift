@@ -31,9 +31,3 @@ struct MediationDetailsView: View {
         }
     }
 }
-
-struct MediationDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MediationDetailsView(advice: MeditationAdvice(image: Image("Meditation-Calm"), title: "Relax", description: "Some long advice", shortDescription: "Some long advice"))
-    }
-}

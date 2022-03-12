@@ -58,15 +58,19 @@ final class FirebaseService {
     }
     
     func update(image: UIImage, uid: String) async {
-        //image.jpegData(compressionQuality: 0.8)
+        let data = image.jpegData(compressionQuality: 0.8)
+        let storage = Storage.storage()
+
     }
     
-    func loadImage(image: UIImage, uid: String) async {
-        
+    func load(image: UIImage, date: Date, uid: String) async {
+        let data = image.jpegData(compressionQuality: 0.8)
+        let storage = Storage.storage()
     }
     
-    func deleteImage(name: String, uid: String) async {
+    func delete(name: String, date: Date, uid: String) async {
         
+        let storage = Storage.storage()
     }
     
 }

@@ -16,6 +16,7 @@ struct MeditationView: View {
             VStack {
                 Text(advice.title)
                     .font(.alegreyaMedium(size: 25))
+                    .lineLimit(2)
                 Text(advice.shortDescription)
                     .font(.alegreyaSansMedium(size: 14))
                 Button(action: {}) {
@@ -27,10 +28,12 @@ struct MeditationView: View {
                 .background(Color.outerSpace)
                 .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             }
+            .padding()
                 advice.image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: 200, maxHeight: 200, alignment: .center)
+                    .frame(maxWidth: 180, maxHeight: 200, alignment: .center)
+                    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))

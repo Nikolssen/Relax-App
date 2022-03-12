@@ -13,12 +13,12 @@ class User: ObservableObject {
     let name: String
     let email: String
     let birthdayDate: Date
-    var image: Image?
-    var images: [Image]
+    @Published var image: Image?
+    @Published var images: [Image]
     lazy var sign: HoroscopeSign = {
         birthdayDate.zodiacSign
     }()
-    var emotion: Emotion?
+    @Published var emotion: Emotion?
     
     init(name: String, email: String, birthdayDate: Date, image: Image? = nil, images: [Image] = []) {
         self.name = name

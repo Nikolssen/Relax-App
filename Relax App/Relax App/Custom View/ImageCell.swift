@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ImageCell: View {
-    //var image: Image
+    var image: Image
+    var description: String
     var body: some View {
         ZStack {
-            Image.Backgrounds.wood
+            image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
             HStack{
-            Text("Some text")
+            Text(description)
                 .foregroundColor(.white)
                 .font(.alegreyaSansMedium(size: 18))
                 .padding(.top, 60)
@@ -31,6 +32,6 @@ struct ImageCell: View {
 
 struct ImageCell_Previews: PreviewProvider {
     static var previews: some View {
-        ImageCell()
+        ImageCell(image: Image.Backgrounds.wood, description: "12:12")
     }
 }

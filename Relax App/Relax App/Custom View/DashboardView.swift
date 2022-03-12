@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @EnvironmentObject var user: User
     var body: some View {
         ZStack {
             Color.outerSpace
                 .ignoresSafeArea()
             VStack {
-                Spacer()
+                
                 Text("Welcome back, User!")
                     .font(.alegreyaMedium(size: 30))
                     .foregroundColor(.white)
@@ -22,19 +23,23 @@ struct DashboardView: View {
                     .foregroundColor(.white)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .center, spacing: 15) {
-                        ForEach(Emotion.allCases) {
-                            Moodlet(mood: $0, isSelected: false)
+                        ForEach(Emotion.allCases) { emotion in
+                            Moodlet(mood: emotion, isSelected: emotion == user.emotion)
+                                .onTapGesture { user.emotion = emotion }
                         }
                     }
                 }
                 Spacer()
-                ScrollView(.vertical, showsIndicators: false) {
-                    LazyVGrid(columns: [.init(.flexible(minimum: 100, maximum: .infinity), spacing: 20, alignment: .center)]) {
-                        MeditationView(advice: MeditationAdvice(image: Image("Meditation-Calm"), title: "Relax", description: "Some long advice", shortDescription: "Some long advice"))
-                        MeditationView(advice: MeditationAdvice(image: Image("Meditation-Calm"), title: "Relax", description: "Some long advice", shortDescription: "Some long advice"))
-                        MeditationView(advice: MeditationAdvice(image: Image("Meditation-Calm"), title: "Relax", description: "Some long advice", shortDescription: "Some long advice"))
+                if let emotion = user.emotion, let piecesOfAdvice = MeditationAdvice.advices.filter { $0.emotion == emotion } {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVGrid(columns: [.init(.flexible(minimum: 100, maximum: .infinity), spacing: 20, alignment: .center)]) {
+                            ForEach(piecesOfAdvice, id: \.title) {
+                                MeditationView(advice: $0)
+                            }
+                        }
                     }
                 }
+
             }
         }
     }
@@ -43,5 +48,6 @@ struct DashboardView: View {
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardView()
+            .environmentObject(User(name: "", email: "", birthdayDate: Date()))
     }
 }

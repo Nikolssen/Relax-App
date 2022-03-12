@@ -56,5 +56,6 @@ struct DashboardTabView: View {
 struct DashboardTabView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardTabView()
+            .environmentObject(User(name: "", email: "", birthdayDate: Date()))
     }
 }
