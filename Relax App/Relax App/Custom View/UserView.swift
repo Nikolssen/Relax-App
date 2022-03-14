@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserView: View {
     @EnvironmentObject var user: User
+    @State var showSheet: Bool = false
     var body: some View {
         ZStack {
             Image.Backgrounds.jungles
