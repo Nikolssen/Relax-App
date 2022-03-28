@@ -133,6 +133,14 @@ extension Image {
         static var user: Image {
             Image("user")
         }
+        
+        static var caduceus: Image {
+            Image("caduceus")
+        }
+        
+        static var misc: Image {
+            Image(systemName: "chevron.left.slash.chevron.right")
+        }
     }
     
     enum Backgrounds {

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    var registrationAction: () -> Void
+    var authorizationAction: () -> Void
+    
     var body: some View {
         ZStack {
             Image.Backgrounds.wood
@@ -31,9 +35,9 @@ struct OnboardingView: View {
                 .foregroundColor(Color.white)
                 .font(Font.alegreyaSansMedium(size: 18))
                 
-                BoldButton(title: Constants.buttonTitle, action: {})
+                BoldButton(title: Constants.buttonTitle, action: authorizationAction)
                     .padding(.horizontal, 30)
-                Button(Constants.registerTitle, action: {})
+                Button(Constants.registerTitle, action: registrationAction)
                     .foregroundColor(Color.white)
                     .font(Font.alegreyaSansMedium(size: 18))
             }
@@ -51,8 +55,3 @@ struct OnboardingView: View {
     }
 }
 
-struct OnboardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingView()
-    }
-}

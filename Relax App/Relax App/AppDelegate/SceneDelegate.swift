@@ -7,17 +7,17 @@
 
 import UIKit
 import SwiftUI
-
+import Firebase
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coordinator: Coordinator!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
-        let viewController = UIHostingController<AuthorizationView>(rootView: .init())
-        window.rootViewController = viewController
+        Firebase.FirebaseApp.configure()
+        self.coordinator = Coordinator(window: window)
         self.window = window
         window.makeKeyAndVisible()
     }

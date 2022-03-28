@@ -54,4 +54,21 @@ enum Emotion: Int, MoodletRepresentable, CaseIterable, Identifiable {
         self.rawValue
     }
     
+    static func value(from string: String) -> Emotion? {
+        switch string {
+        case "Enraged":
+            return .enraged
+        case "Depressed":
+            return .depressed
+        case "Focused":
+            return .focused
+        case "Relaxed":
+            return .relaxed
+        case "Calm":
+            return .calm
+        case "Worried":
+            return .worried
+        default: return nil
+        }
+    }
 }

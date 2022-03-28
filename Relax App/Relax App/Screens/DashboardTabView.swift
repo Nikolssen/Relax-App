@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct DashboardTabView: View {
+    let userViewModel: UserViewModel
     var body: some View {
         ZStack {
             Color.outerSpace.ignoresSafeArea()
             VStack {
             NavigationBar()
             TabView {
-                DashboardView()
+                DashboardView(viewModel: .init())
                     .tag(0)
                     .tabItem {
                         Image.Icons.logo
@@ -24,10 +25,21 @@ struct DashboardTabView: View {
                     .tabItem {
                         Image.Icons.tunes
                     }
-                UserView()
+                
+                UserView(viewModel: userViewModel)
                     .tag(2)
                     .tabItem {
                         Image.Icons.user
+                    }
+                HealthView()
+                    .tag(3)
+                    .tabItem {
+                        Image.Icons.caduceus
+                    }
+                AuthorView()
+                    .tag(4)
+                    .tabItem {
+                        Image.Icons.misc
                     }
             }
             .accentColor(Color.white)
@@ -35,7 +47,8 @@ struct DashboardTabView: View {
         }
     }
     
-    init() {
+    init(userViewModel: UserViewModel) {
+        self.userViewModel = userViewModel
         let itemAppearance = UITabBarItemAppearance()
         itemAppearance.selected.iconColor = UIColor.white
         itemAppearance.normal.iconColor = UIColor.white.withAlphaComponent(0.5)
@@ -50,12 +63,5 @@ struct DashboardTabView: View {
         }
         UITabBar.appearance().standardAppearance = appeareance
 
-    }
-}
-
-struct DashboardTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardTabView()
-            .environmentObject(User(name: "", email: "", birthdayDate: Date()))
     }
 }

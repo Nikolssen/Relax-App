@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct AuthorizationView: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @StateObject var viewModel: AuthorizationViewModel
     var body: some View {
         ZStack {
             Image.Backgrounds.jungles
@@ -32,31 +31,34 @@ struct AuthorizationView: View {
                 }
                 Spacer()
                 VStack(alignment: .center, spacing: 0) {
-                    AuthTextField(isSecure: false, text: $email, placeholder: Constants.emailPlaceholder)
-                    AuthTextField(isSecure: true, text: $password, placeholder: Constants.passwordPlaceholder)
+                    AuthTextField(isSecure: false, text: $viewModel.email, placeholder: Constants.emailPlaceholder)
+                    AuthTextField(isSecure: true, text: $viewModel.password, placeholder: Constants.passwordPlaceholder)
                 }
                 Spacer()
                 VStack(alignment: .leading, spacing: 20) {
-                    BoldButton(title: Constants.signInTitle, action: {})
-                    BoldButton(title: Constants.registerTitle, action: {})
+                    BoldButton(title: Constants.signInTitle, action: { viewModel.signIn() })
+                    BoldButton(title: Constants.registerTitle, action: { viewModel.goToRegistration() })
                 }
                 
                 Spacer()
             }
+            .ignoresSafeArea(.keyboard)
             .padding(.horizontal, 30)
             
+            if viewModel.showSpinner {
+                ActivityView()
+            }
         }
+
+        
     }
     private enum Constants {
         static let signInTitle = "Sign In"
         static let emailPlaceholder = "Email"
         static let passwordPlaceholder = "Password"
         static let registerTitle = "Register"
-    }
-}
-
-struct AuthorizationView_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthorizationView()
+        static let emailEmptyMessage = "E-mail is empty"
+        static let passwordMessage = "Password is empty"
+        static let passwordShortMessage = "Password must containt at least 6 characters"
     }
 }

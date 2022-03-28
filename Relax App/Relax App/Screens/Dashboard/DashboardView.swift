@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
-    @EnvironmentObject var user: User
+    @StateObject var viewModel: DashboardViewModel
     var body: some View {
         ZStack {
             Color.outerSpace
@@ -24,13 +24,13 @@ struct DashboardView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .center, spacing: 15) {
                         ForEach(Emotion.allCases) { emotion in
-                            Moodlet(mood: emotion, isSelected: emotion == user.emotion)
-                                .onTapGesture { user.emotion = emotion }
+                            Moodlet(mood: emotion, isSelected: emotion == viewModel.emotion)
+                                .onTapGesture { viewModel.emotion = emotion }
                         }
                     }
                 }
                 Spacer()
-                if let emotion = user.emotion, let piecesOfAdvice = MeditationAdvice.advices.filter { $0.emotion == emotion } {
+                if let emotion = viewModel.emotion, let piecesOfAdvice = MeditationAdvice.advices.filter { $0.emotion == emotion } {
                     ScrollView(.vertical, showsIndicators: false) {
                         LazyVGrid(columns: [.init(.flexible(minimum: 100, maximum: .infinity), spacing: 20, alignment: .center)]) {
                             ForEach(piecesOfAdvice, id: \.title) {
@@ -42,12 +42,5 @@ struct DashboardView: View {
 
             }
         }
-    }
-}
-
-struct DashboardView_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardView()
-            .environmentObject(User(name: "", email: "", birthdayDate: Date()))
     }
 }

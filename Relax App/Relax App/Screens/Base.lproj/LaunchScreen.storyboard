@@ -49,7 +49,7 @@
     </scenes>
     <resources>
         <image name="background-woods" width="375" height="735"/>
-        <image name="logo" width="1600" height="945"/>
+        <image name="logo" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

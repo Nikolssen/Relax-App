@@ -13,7 +13,7 @@ struct BoldButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .tracking(4)
+                .tracking(3)
                 .font(Font.alegreyaSansMedium(size: 25))
                 .foregroundColor(Color.white)
                 .frame(maxWidth: .infinity, maxHeight: 75, alignment: .center)

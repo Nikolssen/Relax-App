@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct RegistrationView: View {
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var name: String = ""
-    @State var date: Date = Date()
+    @StateObject var viewModel: RegistrationViewModel
     var body: some View {
         ZStack {
             Image.Backgrounds.jungles
@@ -34,35 +31,43 @@ struct RegistrationView: View {
                 }
                 Spacer()
                 VStack(alignment: .center, spacing: 0) {
-                    AuthTextField(isSecure: false, text: $email, placeholder: Constants.emailPlaceholder)
-                    AuthTextField(isSecure: true, text: $password, placeholder: Constants.passwordPlaceholder)
-                    AuthTextField(isSecure: false, text: $name, placeholder: "Name")
-                    DatePicker("Birth Date", selection: $date, displayedComponents: .date)
-                        .font(Font.alegreyaMedium(size: 20))
+                    VStack(alignment: .trailing, spacing: 0) {
+                    AuthTextField(isSecure: false, text: $viewModel.email, placeholder: Constants.emailPlaceholder)
+                    AuthTextField(isSecure: true, text: $viewModel.password, placeholder: Constants.passwordPlaceholder)
+                    AuthTextField(isSecure: false, text: $viewModel.name, placeholder: Constants.namePlaceholder)
+                    DatePicker(Constants.birthDateTitle, selection: $viewModel.date, displayedComponents: .date)
+                        .font(Font.alegreyaSansRegular(size: 20))
                         .foregroundColor(Color.white)
                         .accentColor(.white)
                 }
                 Spacer()
                 VStack(alignment: .leading, spacing: 20) {
-                    BoldButton(title: Constants.registerTitle, action: {})
+                    BoldButton(title: Constants.registerTitle, action: { viewModel.register() })
                 }
                 
                 Spacer()
             }
             .padding(.horizontal, 30)
+            .ignoresSafeArea(.keyboard)
             
+            if viewModel.showSpinner {
+                ActivityView()
+                    
+            }
         }
+    }
     }
     private enum Constants {
         static let registration = "Register"
         static let emailPlaceholder = "Email"
         static let passwordPlaceholder = "Password"
+        static let namePlaceholder = "Name"
         static let registerTitle = "Register"
-    }
-}
-
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView()
+        static let birthDateTitle = "Birth Date"
+        static let emailEmptyMessage = "E-mail is empty"
+        static let nameEmptyMessage = "Name is empty"
+        static let passwordMessage = "Password is empty"
+        static let passwordShortMessage = "Password must containt at least 6 characters"
+        static let dateFutureMessage = "Birth date must not be in future!"
     }
 }
