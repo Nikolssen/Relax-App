@@ -9,8 +9,9 @@ import SwiftUI
 
 struct UserView: View {
 
-    @StateObject var viewModel: UserViewModel
+    @StateObject var viewModel: DashboardViewModel
     @State var showSheet: Bool = false
+    @State var showPicker: Bool = false
     var body: some View {
         ZStack {
             Image.Backgrounds.jungles
@@ -18,25 +19,29 @@ struct UserView: View {
                 .ignoresSafeArea()
             VStack(alignment: .center, spacing: 5) {
                 
-//                    if let image = user.image {
-//                        image
-//                            .frame(width: 150, height: 150, alignment: .center)
-//                            .clipShape(Circle())
-//                            .actionSheet(isPresented: $showSheet, content: {
-//                                ActionSheet(title: Text("What would you like to do?"), message: nil, buttons: [
-//                                    .default(Text("Delete"), action: {}),
-//                                    .default(Text("Add new photo"), action: {}),
-//                                    .cancel()])
-//                            })
-//                    }
-//                    else {
-//                        Color.gray
-//                            .frame(width: 150, height: 150, alignment: .center)
-//                            .clipShape(Circle())
-//                            .sheet(isPresented: $showSheet) {
-//                                ImagePicker(selectedImage: $user.image)
-//                            }
-//                    }
+                if let image = viewModel.user.image {
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: 150, height: 150, alignment: .center)
+                            .clipShape(Circle())
+                            .onTapGesture {
+                                showSheet = true
+                            }
+                            .sheet(isPresented: $showSheet) {
+                                ImagePicker(selectedImage: $viewModel.userImage)
+                            }
+                    }
+                    else {
+                        Color.gray
+                            .frame(width: 150, height: 150, alignment: .center)
+                            .clipShape(Circle())
+                            .onTapGesture {
+                                showSheet = true
+                            }
+                            .sheet(isPresented: $showSheet) {
+                                ImagePicker(selectedImage: $viewModel.userImage)
+                            }
+                    }
                     
                 
                 Text(viewModel.name)
@@ -45,9 +50,13 @@ struct UserView: View {
                 ScrollView {
                 HStack(alignment: .top) {
                     Moodlet(mood: viewModel.sign, isSelected: false)
-                    Text("This horoscope is for you today.")
-                        .foregroundColor(.white)
-                        .font(.alegreyaSansMedium(size: 20))
+                    VStack {
+                        Text("This horoscope is for you today:")
+                        Text(viewModel.forecast ?? "")
+                    }
+                    .foregroundColor(.white)
+                    .font(.alegreyaSansMedium(size: 20))
+
                 }
                 
                     LazyVGrid(columns: [GridItem(.flexible(minimum: 40)),
@@ -56,6 +65,12 @@ struct UserView: View {
                             ImageCell(image: Image(uiImage: $0.0), description: $0.1.time)
                         }
                         ImageAdditionCell()
+                            .onTapGesture {
+                               showPicker = true
+                            }
+                            .sheet(isPresented: $showPicker) {
+                                ImagePicker(selectedImage: $viewModel.newImage)
+                            }
                     }
                     .padding(.horizontal, 10)
                 }

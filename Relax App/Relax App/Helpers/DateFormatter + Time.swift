@@ -11,7 +11,7 @@ extension Date {
     static var timeFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = .current
-        formatter.timeStyle = .medium
+        formatter.timeStyle = .short
         return formatter
     }
     

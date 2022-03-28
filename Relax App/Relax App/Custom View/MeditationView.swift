@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MeditationView: View {
     let advice: MeditationAdvice
+    let action: () -> Void
     var body: some View {
         ZStack {
             Color.springWood
@@ -16,10 +17,12 @@ struct MeditationView: View {
             VStack {
                 Text(advice.title)
                     .font(.alegreyaMedium(size: 25))
+                    .foregroundColor(.gray)
                     .lineLimit(2)
                 Text(advice.shortDescription)
                     .font(.alegreyaSansMedium(size: 14))
-                Button(action: {}) {
+                    .foregroundColor(.gray)
+                Button(action: action) {
                     Text("More...")
                         .font(Font.alegreyaSansMedium(size: 15))
                         .foregroundColor(Color.white)

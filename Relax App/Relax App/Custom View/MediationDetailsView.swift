@@ -27,6 +27,7 @@ struct MediationDetailsView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: .infinity, maxHeight: 200, alignment: .center)
                 }
+                .padding()
             }
         }
     }

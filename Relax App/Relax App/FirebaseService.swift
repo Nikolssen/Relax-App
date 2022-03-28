@@ -29,11 +29,13 @@ final class FirebaseService {
             
             let storage = Storage.storage()
             let avatar: UIImage? = await withCheckedContinuation { resume in
-                storage.reference(forURL: uid).child("avatar.jpeg").getData(maxSize: 1024*1024*6) { data, _ in
+                storage.reference().child(uid).child("avatar.jpeg").getData(maxSize: 1024*1024*6) { data, _ in
                         if let data = data, let image = UIImage(data: data) {
                             resume.resume(returning: image)
                         }
+                    else {
                         resume.resume(returning: nil)
+                    }
                     }
             }
 
@@ -54,18 +56,20 @@ final class FirebaseService {
             for value in userImages {
                 
                 let image: UIImage? = await withCheckedContinuation { resume in
-                    storage.reference(forURL: value.1).getData(maxSize: 1024*1024*6) { data, _ in
+                    storage.reference(withPath: value.1).getData(maxSize: 1024*1024*6) { data, _ in
                             if let data = data, let image = UIImage(data: data) {
                                 resume.resume(returning: image)
                             }
+                        else {
                             resume.resume(returning: nil)
+                        }
+                            
                         }
                 }
                 if let image = image {
                     images.append((image, value.0, value.1))
                 }
             }
-        //
             return User(name: name, email: email, birthdayDate: date, weight: weight, height: height, image: avatar, images: images, emotions: emotions ?? [], document: document.reference.path, uid: uid)
         }
         catch {
@@ -98,10 +102,11 @@ final class FirebaseService {
     
     func load(image: UIImage, date: Date, user: User) async {
         guard let data = image.jpegData(compressionQuality: 0.5) else { return }
-        let reference = Storage.storage().reference().child(user.uid).child(String(date.timeIntervalSince1970) + ".jpeg")
+        let reference = Storage.storage().reference().child(user.uid).child(String(date.timeIntervalSince1970).replacingOccurrences(of: ".", with: "_") + ".jpeg")
         reference.putData(data).resume()
         let database = Firestore.firestore()
-        database.collection("images").addDocument(data: ["user": user.uid, "date": date, "link": reference])
+        database.collection("images").addDocument(data: ["user": user.uid, "date": date, "link": reference.fullPath])
+        user.images.append((image, date, reference.fullPath))
     }
     
     func delete(name: String, reference: String, user: User) async {

@@ -31,7 +31,6 @@ struct RegistrationView: View {
                 }
                 Spacer()
                 VStack(alignment: .center, spacing: 0) {
-                    VStack(alignment: .trailing, spacing: 0) {
                     AuthTextField(isSecure: false, text: $viewModel.email, placeholder: Constants.emailPlaceholder)
                     AuthTextField(isSecure: true, text: $viewModel.password, placeholder: Constants.passwordPlaceholder)
                     AuthTextField(isSecure: false, text: $viewModel.name, placeholder: Constants.namePlaceholder)
@@ -54,7 +53,6 @@ struct RegistrationView: View {
                 ActivityView()
                     
             }
-        }
     }
     }
     private enum Constants {

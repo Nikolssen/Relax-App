@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct DashboardTabView: View {
-    let userViewModel: UserViewModel
+    @State var dashboardViewModel: DashboardViewModel
     var body: some View {
         ZStack {
             Color.outerSpace.ignoresSafeArea()
             VStack {
             NavigationBar()
             TabView {
-                DashboardView(viewModel: .init())
+                DashboardView(viewModel: dashboardViewModel)
                     .tag(0)
                     .tabItem {
                         Image.Icons.logo
@@ -26,7 +26,7 @@ struct DashboardTabView: View {
                         Image.Icons.tunes
                     }
                 
-                UserView(viewModel: userViewModel)
+                UserView(viewModel: dashboardViewModel)
                     .tag(2)
                     .tabItem {
                         Image.Icons.user
@@ -47,8 +47,8 @@ struct DashboardTabView: View {
         }
     }
     
-    init(userViewModel: UserViewModel) {
-        self.userViewModel = userViewModel
+    init(dashboardViewModel: DashboardViewModel) {
+        self.dashboardViewModel = dashboardViewModel
         let itemAppearance = UITabBarItemAppearance()
         itemAppearance.selected.iconColor = UIColor.white
         itemAppearance.normal.iconColor = UIColor.white.withAlphaComponent(0.5)

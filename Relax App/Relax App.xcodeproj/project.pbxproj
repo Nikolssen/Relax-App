@@ -20,7 +20,6 @@
 		3F58400027C7775900015D46 /* ImageAdditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */; };
 		3F58400227C7818E00015D46 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58400127C7818E00015D46 /* PlayerView.swift */; };
 		3F58BEA727F19C55005BF693 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58BEA627F19C55005BF693 /* DashboardViewModel.swift */; };
-		3F58BEAA27F19D65005BF693 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58BEA927F19D65005BF693 /* UserViewModel.swift */; };
 		3F58BEAC27F1A8FB005BF693 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58BEAB27F1A8FB005BF693 /* ActivityView.swift */; };
 		3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */; };
 		3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */; };
@@ -54,6 +53,8 @@
 		3FA2A60D27EF1BF3008BDDDC /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2A60C27EF1BF3008BDDDC /* RegistrationViewModel.swift */; };
 		3FA2A61027EF1D9D008BDDDC /* String+Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2A60F27EF1D9D008BDDDC /* String+Checks.swift */; };
 		3FBE85BF27F24557003ED3F6 /* DateFormatter + Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE85BE27F24557003ED3F6 /* DateFormatter + Time.swift */; };
+		3FBE85C227F25640003ED3F6 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE85C127F25640003ED3F6 /* BarView.swift */; };
+		3FBE85C427F2565A003ED3F6 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE85C327F2565A003ED3F6 /* BarChartView.swift */; };
 		3FC83E6027CBFCB600DFE5FB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC83E5F27CBFCB600DFE5FB /* ImagePicker.swift */; };
 		3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB811527B85A2400B1AD3B /* Resources.swift */; };
 		3FDD423427CB7E1B00ED1D79 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD423327CB7E1B00ED1D79 /* Forecast.swift */; };
@@ -88,7 +89,6 @@
 		3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdditionCell.swift; sourceTree = "<group>"; };
 		3F58400127C7818E00015D46 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		3F58BEA627F19C55005BF693 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		3F58BEA927F19D65005BF693 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		3F58BEAB27F1A8FB005BF693 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		3F5CF3D727BE557500C95E39 /* HoroscopeSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeSign.swift; sourceTree = "<group>"; };
 		3F5CF3D927BE558900C95E39 /* MoodletRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodletRepresentable.swift; sourceTree = "<group>"; };
@@ -120,6 +120,8 @@
 		3FA2A60C27EF1BF3008BDDDC /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3FA2A60F27EF1D9D008BDDDC /* String+Checks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Checks.swift"; sourceTree = "<group>"; };
 		3FBE85BE27F24557003ED3F6 /* DateFormatter + Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter + Time.swift"; sourceTree = "<group>"; };
+		3FBE85C127F25640003ED3F6 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		3FBE85C327F2565A003ED3F6 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		3FC83E5F27CBFCB600DFE5FB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3FDB811327B8565000B1AD3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		3FDB811527B85A2400B1AD3B /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		3F52E96527B98A1600637ABF /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				3FBE85C027F25627003ED3F6 /* Charts */,
 				3FC83E5F27CBFCB600DFE5FB /* ImagePicker.swift */,
 				3FDB811327B8565000B1AD3B /* AuthTextField.swift */,
 				3F52E95A27B973E700637ABF /* BoldButton.swift */,
@@ -212,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				3F62DA2E27BD0F550048A624 /* UserView.swift */,
-				3F58BEA927F19D65005BF693 /* UserViewModel.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -321,6 +323,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		3FBE85C027F25627003ED3F6 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				3FBE85C127F25640003ED3F6 /* BarView.swift */,
+				3FBE85C327F2565A003ED3F6 /* BarChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +433,7 @@
 				3F653E0027C8C8A00062B260 /* MediationDetailsView.swift in Sources */,
 				3FA2A60927EF14B1008BDDDC /* Service.swift in Sources */,
 				3F5CF3D827BE557500C95E39 /* HoroscopeSign.swift in Sources */,
+				3FBE85C427F2565A003ED3F6 /* BarChartView.swift in Sources */,
 				3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */,
 				3F989D9727CBEA8800632EDD /* AuthorView.swift in Sources */,
 				3F28A8DD27C54E53007ED45A /* NavigationBar.swift in Sources */,
@@ -433,12 +445,12 @@
 				3FA2A61027EF1D9D008BDDDC /* String+Checks.swift in Sources */,
 				3F2FA66927BC3BDE0081A5CB /* Moodlet.swift in Sources */,
 				3F989D9527CBEA7D00632EDD /* HealthView.swift in Sources */,
+				3FBE85C227F25640003ED3F6 /* BarView.swift in Sources */,
 				3F5CF3DD27BE5FDB00C95E39 /* User.swift in Sources */,
 				3FA2A60B27EF170B008BDDDC /* AuthorizationViewModel.swift in Sources */,
 				3F81334A27C8D4C200A0A2C1 /* FirebaseService.swift in Sources */,
 				3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */,
 				3F62DA2F27BD0F550048A624 /* UserView.swift in Sources */,
-				3F58BEAA27F19D65005BF693 /* UserViewModel.swift in Sources */,
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
 				3FDD423427CB7E1B00ED1D79 /* Forecast.swift in Sources */,
 				3F58BEAC27F1A8FB005BF693 /* ActivityView.swift in Sources */,
