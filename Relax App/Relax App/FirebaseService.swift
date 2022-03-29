@@ -110,11 +110,11 @@ final class FirebaseService {
         user.images.append((image, date, reference.fullPath))
     }
     
-    func delete(name: String, reference: String, user: User) async {
+    func delete(reference: String, user: User) async {
         let storage = Storage.storage()
-        try? await storage.reference(forURL: reference).delete()
+        try? await storage.reference(withPath: reference).delete()
         let database = Firestore.firestore()
-        let snapshot = try? await database.collection("images").whereField("uid", isEqualTo: user.uid).whereField("link", isEqualTo: reference).getDocuments()
+        let snapshot = try? await database.collection("images").whereField("link", isEqualTo: reference).getDocuments()
         try? await snapshot?.documents.first?.reference.delete()
     }
     

@@ -10,6 +10,7 @@ import UIKit
 
 @available(iOS 13.0, *)
 public struct ImageViewer: View {
+    var deleteAction: () -> Void
     @Binding var viewerShown: Bool
     @Binding var image: Image
     @Binding var imageOpt: Image?
@@ -21,19 +22,21 @@ public struct ImageViewer: View {
     @State var dragOffset: CGSize = CGSize.zero
     @State var dragOffsetPredicted: CGSize = CGSize.zero
     
-    public init(image: Binding<Image>, viewerShown: Binding<Bool>, aspectRatio: Binding<CGFloat>? = nil, caption: Text? = nil, closeButtonTopRight: Bool? = false) {
+    public init(image: Binding<Image>, viewerShown: Binding<Bool>, deleteAction: @escaping () -> Void, aspectRatio: Binding<CGFloat>? = nil, caption: Text? = nil, closeButtonTopRight: Bool? = false) {
         _image = image
         _viewerShown = viewerShown
         _imageOpt = .constant(nil)
         self.aspectRatio = aspectRatio
+        self.deleteAction = deleteAction
         _caption = State(initialValue: caption)
         _closeButtonTopRight = State(initialValue: closeButtonTopRight)
     }
     
-    public init(image: Binding<Image?>, viewerShown: Binding<Bool>, aspectRatio: Binding<CGFloat>? = nil, caption: Text? = nil, closeButtonTopRight: Bool? = false) {
+    public init(image: Binding<Image?>, viewerShown: Binding<Bool>, deleteAction: @escaping () -> Void, aspectRatio: Binding<CGFloat>? = nil, caption: Text? = nil, closeButtonTopRight: Bool? = false) {
         _image = .constant(Image(systemName: ""))
         _imageOpt = image
         _viewerShown = viewerShown
+        self.deleteAction = deleteAction
         self.aspectRatio = aspectRatio
         _caption = State(initialValue: caption)
         _closeButtonTopRight = State(initialValue: closeButtonTopRight)
@@ -56,19 +59,22 @@ public struct ImageViewer: View {
                     VStack {
                         HStack {
                             
-                            if self.closeButtonTopRight == true {
-                                Spacer()
-                            }
-                            
                             Button(action: { self.viewerShown = false }) {
-                                Image(systemName: "xmark")
-                                    .foregroundColor(Color(UIColor.white))
-                                    .font(.system(size: UIFontMetrics.default.scaledValue(for: 24)))
+                                Text("Close")
+                                    .foregroundColor(.white)
+                                    .font(.alegreyaSansRegular(size: 18))
                             }
-                            
-                            if self.closeButtonTopRight != true {
-                                Spacer()
+                            Spacer()
+                            Button(action: {
+                                deleteAction()
+                                self.viewerShown = false
+                                
+                            }) {
+                                Text("Delete")
+                                    .foregroundColor(.white)
+                                    .font(.alegreyaSansRegular(size: 18))
                             }
+
                         }
                         
                         Spacer()

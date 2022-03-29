@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import UIKit
 import AVFAudio
+import SwiftUI
 
 class DashboardViewModel: ObservableObject {
     @Published var emotion: Emotion?
@@ -25,8 +26,8 @@ class DashboardViewModel: ObservableObject {
     @Published var height: String
     @Published var bmi: String = ""
     @Published var showHealthError: Bool = false
-    
-    
+    var deleteReference: String?
+    @Published var lookImage: Image?
     @Published var newImage: UIImage
     @Published var userImage: UIImage
     
@@ -169,6 +170,19 @@ class DashboardViewModel: ObservableObject {
     func logout() {
         service.firebaseService.logout()
         coordinator.logout()
+    }
+    
+    func deleteImage() {
+        guard let deleteReference = deleteReference else {
+            return
+        }
+
+        Task {
+            await service.firebaseService.delete(reference: deleteReference, user: user)
+        }
+        user.images.removeAll { $0.2 == deleteReference }
+        self.deleteReference = nil
+        lookImage = nil
     }
     
 }
