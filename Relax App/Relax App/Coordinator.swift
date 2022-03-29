@@ -63,4 +63,11 @@ final class Coordinator {
         baseController = controller
         window.rootViewController = controller
     }
+    
+    func logout() {
+        let baseController = UINavigationController()
+        baseController.setViewControllers([onBoardingController], animated: false)
+        self.baseController = baseController
+        window.rootViewController = baseController
+    }
 }

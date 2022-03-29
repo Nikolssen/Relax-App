@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import UIKit
+import AVFAudio
 
 class DashboardViewModel: ObservableObject {
     @Published var emotion: Emotion?
@@ -19,9 +20,18 @@ class DashboardViewModel: ObservableObject {
         user.sign
     }
     
-    
     @Published var newImage: UIImage
     @Published var userImage: UIImage
+    
+    var songURLs: [URL] = [URL(fileURLWithPath: Bundle.main.path(forResource: "1.mp3", ofType: nil)!),
+                           URL(fileURLWithPath: Bundle.main.path(forResource: "2.mp3", ofType: nil)!),
+                           URL(fileURLWithPath: Bundle.main.path(forResource: "3.mp3", ofType: nil)!),
+                           URL(fileURLWithPath: Bundle.main.path(forResource: "4.mp3", ofType: nil)!),
+    ]
+    
+    var currentSong: Int = 0
+    @Published var isPlaying = false
+    var player: AVAudioPlayer?
     
     var forecast: String?
     var user: User
@@ -79,4 +89,52 @@ class DashboardViewModel: ObservableObject {
             }
         }
     }
+    
+    func nextSong() {
+        if currentSong == 3 {
+            currentSong = 1
+        }
+        else { currentSong += 1 }
+        player?.stop()
+        player = try? AVAudioPlayer(contentsOf: songURLs[currentSong])
+        player?.play()
+        isPlaying = true
+    }
+    
+    func previousSong() {
+        if currentSong == 0 {
+            currentSong = 3
+        } else { currentSong -= 1 }
+        player?.stop()
+        player = try? AVAudioPlayer(contentsOf: songURLs[currentSong])
+        player?.play()
+        isPlaying = true
+    }
+    
+    func stop() {
+        if let player = player {
+            if isPlaying {
+                player.pause()
+                isPlaying = false
+            }
+            else {
+                player.play()
+                isPlaying = true
+            }
+        }
+        else {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+                try AVAudioSession.sharedInstance().setActive(true)
+            }
+            catch {
+                
+            }
+
+            player = try? AVAudioPlayer(contentsOf: songURLs[currentSong])
+            player?.play()
+            isPlaying = true
+        }
+    }
+    
 }

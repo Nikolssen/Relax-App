@@ -175,7 +175,6 @@
 				3F28A8DC27C54E53007ED45A /* NavigationBar.swift */,
 				3F583FFD27C770F100015D46 /* ImageCell.swift */,
 				3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */,
-				3F58400127C7818E00015D46 /* PlayerView.swift */,
 				3F653DFF27C8C8A00062B260 /* MediationDetailsView.swift */,
 				3F58BEAB27F1A8FB005BF693 /* ActivityView.swift */,
 			);
@@ -205,6 +204,7 @@
 		3F58BEA527F19C3C005BF693 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				3F58400127C7818E00015D46 /* PlayerView.swift */,
 				3FFA5F9127BC42CE0091C531 /* DashboardView.swift */,
 				3F58BEA627F19C55005BF693 /* DashboardViewModel.swift */,
 			);

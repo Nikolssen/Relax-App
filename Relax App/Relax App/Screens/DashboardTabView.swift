@@ -20,7 +20,7 @@ struct DashboardTabView: View {
                     .tabItem {
                         Image.Icons.logo
                     }
-                PlayerView()
+                PlayerView(viewModel: dashboardViewModel)
                     .tag(1)
                     .tabItem {
                         Image.Icons.tunes

@@ -56,9 +56,10 @@ struct UserView: View {
                         Text(viewModel.forecast ?? "")
                     }
                     .foregroundColor(.white)
-                    .font(.alegreyaSansMedium(size: 20))
+                    .font(.alegreyaSansRegular(size: 18))
 
                 }
+                .padding(.horizontal)
                 
                     LazyVGrid(columns: [GridItem(.flexible(minimum: 40)),
                     GridItem(.flexible(minimum: 40))], alignment: .center, spacing: 30, pinnedViews: []) {

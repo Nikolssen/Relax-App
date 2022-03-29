@@ -94,7 +94,7 @@ final class FirebaseService {
     }
     
     func update(image: UIImage, user: User) async {
-        guard let data = image.jpegData(compressionQuality: 0.5) else { return }
+        guard let data = image.jpegData(compressionQuality: 0.4) else { return }
         let reference = Storage.storage().reference().child(user.uid).child("avatar.jpeg")
         reference.putData(data).resume()
         user.image = image
@@ -102,7 +102,7 @@ final class FirebaseService {
     }
     
     func load(image: UIImage, date: Date, user: User) async {
-        guard let data = image.jpegData(compressionQuality: 0.5) else { return }
+        guard let data = image.jpegData(compressionQuality: 0.4) else { return }
         let reference = Storage.storage().reference().child(user.uid).child(String(date.timeIntervalSince1970).replacingOccurrences(of: ".", with: "_") + ".jpeg")
         reference.putData(data).resume()
         let database = Firestore.firestore()
