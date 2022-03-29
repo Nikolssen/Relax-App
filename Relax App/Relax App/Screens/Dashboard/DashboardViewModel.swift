@@ -20,6 +20,12 @@ class DashboardViewModel: ObservableObject {
         user.sign
     }
     
+    @Published var weight: String
+    @Published var height: String
+    @Published var bmi: String = ""
+    @Published var showHealthError: Bool = false
+    
+    
     @Published var newImage: UIImage
     @Published var userImage: UIImage
     
@@ -41,6 +47,8 @@ class DashboardViewModel: ObservableObject {
     init(user: User, service: Service) {
         self.user = user
         self.service = service
+        self.weight = user.weight?.description ?? ""
+        self.height = user.height?.description ?? ""
         newImage = UIImage()
         userImage = UIImage()
         emotion = user.emotion ?? user.emotions.sorted(by: { $0.0 < $1.0 }).first?.1
@@ -137,4 +145,61 @@ class DashboardViewModel: ObservableObject {
         }
     }
     
+    func calculateBMI() {
+        if let weight = Float(weight),
+           let height = Float(height), weight > 0, height > 0 {
+            Task {
+                await service.firebaseService.change(height: height, for: user)
+                await service.firebaseService.change(weight: weight, for: user)
+            }
+            let bmi = weight / pow((height / 100), 2)
+            self.bmi = (String(bmi)+". " + BMI.status(for: bmi).description)
+        }
+        else { showHealthError = true }
+        
+    }
+    
+}
+
+enum BMI {
+    case severeThinness
+    case moderateThinness
+    case mildThinness
+    case normal
+    case overweight
+    case obeseI
+    case obeseII
+    case obeseIII
+    
+    static func status(for bmi: Float) -> BMI {
+        if bmi < 16 { return .severeThinness }
+        if bmi < 17 { return .moderateThinness }
+        if bmi < 18.5 { return .mildThinness }
+        if bmi < 25 { return .normal }
+        if bmi < 30 { return .overweight }
+        if bmi < 35 { return .obeseI }
+        if bmi < 40 { return .obeseII }
+        return .obeseIII
+    }
+    
+    var description: String {
+        switch self {
+        case .severeThinness:
+            return "Underweight (Severe thinness)"
+        case .moderateThinness:
+            return "Underweight (Moderate thinness)"
+        case .mildThinness:
+            return "Underweight (Mild thinness)"
+        case .normal:
+            return "Normal"
+        case .overweight:
+            return "Overweight (Pre-obese)"
+        case .obeseI:
+            return "Obese (Class I)"
+        case .obeseII:
+            return "Obese (Class II)"
+        case .obeseIII:
+            return "Obese (Class III)"
+        }
+    }
 }

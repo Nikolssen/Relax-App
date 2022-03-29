@@ -31,7 +31,7 @@ struct DashboardTabView: View {
                     .tabItem {
                         Image.Icons.user
                     }
-                HealthView()
+                HealthView(viewModel: dashboardViewModel)
                     .tag(3)
                     .tabItem {
                         Image.Icons.caduceus
