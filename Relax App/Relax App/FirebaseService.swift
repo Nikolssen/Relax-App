@@ -132,4 +132,8 @@ final class FirebaseService {
         let database = Firestore.firestore()
         try? await database.document(user.document).updateData(["height": height])
     }
+    
+    func logout() {
+        try? Auth.auth().signOut()
+    }
 }

@@ -35,7 +35,7 @@ final class Coordinator {
     }
     
     func dashboardController(for user: User) -> UIViewController {
-        let dashboardViewModel = DashboardViewModel(user: user, service: service)
+        let dashboardViewModel = DashboardViewModel(user: user, service: service, coordinator: self)
         let dashboardController = UIHostingController<DashboardTabView>(rootView: DashboardTabView(dashboardViewModel: dashboardViewModel))
         return dashboardController
     }

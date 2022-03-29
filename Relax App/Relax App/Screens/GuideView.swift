@@ -9,7 +9,12 @@ import SwiftUI
 
 struct GuideView: View {
     var body: some View {
-        EmptyView()
+        TabView {
+
+            AuthorView()
+                .tag(4)
+        }
+        .tabViewStyle(.page)
     }
 }
 

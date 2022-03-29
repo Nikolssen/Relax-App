@@ -27,7 +27,7 @@ struct PlayerView: View {
                         viewModel.stop()
                             
                     }) {
-                        Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
+                        Image(systemName: "playpause.fill")
                             .imageScale(.large)
                             .frame(width: 50, height: 50, alignment: .center)
                     }

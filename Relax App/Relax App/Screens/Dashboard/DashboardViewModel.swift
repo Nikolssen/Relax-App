@@ -40,13 +40,15 @@ class DashboardViewModel: ObservableObject {
     var player: AVAudioPlayer?
     
     var forecast: String?
-    var user: User
-    var service: Service
+    let user: User
+    let service: Service
+    let coordinator: Coordinator
     var cancellables: Set<AnyCancellable> = .init()
     
-    init(user: User, service: Service) {
+    init(user: User, service: Service, coordinator: Coordinator) {
         self.user = user
         self.service = service
+        self.coordinator = coordinator
         self.weight = user.weight?.description ?? ""
         self.height = user.height?.description ?? ""
         newImage = UIImage()
@@ -157,6 +159,11 @@ class DashboardViewModel: ObservableObject {
         }
         else { showHealthError = true }
         
+    }
+    
+    func logout() {
+        service.firebaseService.logout()
+        coordinator.logout()
     }
     
 }
