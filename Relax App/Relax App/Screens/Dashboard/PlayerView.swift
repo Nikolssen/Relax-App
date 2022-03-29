@@ -25,7 +25,7 @@ struct PlayerView: View {
                     }
                     Button(action: {
                         viewModel.stop()
-                            
+                        
                     }) {
                         Image(systemName: "playpause.fill")
                             .imageScale(.large)
@@ -40,7 +40,7 @@ struct PlayerView: View {
                 .foregroundColor(Color.grannySmith)
             }
         }
-
+        
     }
 }
 

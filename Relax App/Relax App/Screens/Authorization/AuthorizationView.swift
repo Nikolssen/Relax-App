@@ -49,7 +49,7 @@ struct AuthorizationView: View {
                 ActivityView()
             }
         }
-
+        
         
     }
     private enum Constants {

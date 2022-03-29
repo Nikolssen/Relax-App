@@ -18,7 +18,7 @@ struct Moodlet: View {
                     .resizable()
                     .frame(width: 48, height: 48, alignment: .center)
                     .foregroundColor(.outerSpace)
-                    
+                
             }
             .shadow(color: isSelected ? .green : .clear, radius: 10, x: 5, y: 5)
             .frame(width: 64, height: 64, alignment: .center)

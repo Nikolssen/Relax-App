@@ -62,6 +62,7 @@
 		3FFA5F9227BC42CE0091C531 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5F9127BC42CE0091C531 /* DashboardView.swift */; };
 		3FFDCF5227C37C6200A73EFC /* DashboardTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */; };
 		3FFF78CD27F3122D0011EFCD /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF78CC27F3122D0011EFCD /* ImageViewer.swift */; };
+		3FFF78CF27F314060011EFCD /* EmotionStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF78CE27F314060011EFCD /* EmotionStatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +132,7 @@
 		3FFA5F9127BC42CE0091C531 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabView.swift; sourceTree = "<group>"; };
 		3FFF78CC27F3122D0011EFCD /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
+		3FFF78CE27F314060011EFCD /* EmotionStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionStatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				3F989D9427CBEA7D00632EDD /* HealthView.swift */,
 				3F989D9627CBEA8800632EDD /* AuthorView.swift */,
 				3F989D9827CBEAA300632EDD /* GuideView.swift */,
+				3FFF78CE27F314060011EFCD /* EmotionStatView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				3F81334A27C8D4C200A0A2C1 /* FirebaseService.swift in Sources */,
 				3FDB811627B85A2400B1AD3B /* Resources.swift in Sources */,
 				3F62DA2F27BD0F550048A624 /* UserView.swift in Sources */,
+				3FFF78CF27F314060011EFCD /* EmotionStatView.swift in Sources */,
 				3F7E7CEA27ABE573005EE388 /* SceneDelegate.swift in Sources */,
 				3FDD423427CB7E1B00ED1D79 /* Forecast.swift in Sources */,
 				3F58BEAC27F1A8FB005BF693 /* ActivityView.swift in Sources */,

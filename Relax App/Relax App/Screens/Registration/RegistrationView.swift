@@ -51,9 +51,9 @@ struct RegistrationView: View {
             
             if viewModel.showSpinner {
                 ActivityView()
-                    
+                
             }
-    }
+        }
     }
     private enum Constants {
         static let registration = "Register"

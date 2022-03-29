@@ -14,30 +14,35 @@ struct DashboardTabView: View {
             Color.outerSpace.ignoresSafeArea()
             VStack {
                 NavigationBar(exitAction: { dashboardViewModel.logout() })
-            TabView {
-                DashboardView(viewModel: dashboardViewModel)
-                    .tag(0)
-                    .tabItem {
-                        Image.Icons.logo
-                    }
-                PlayerView(viewModel: dashboardViewModel)
-                    .tag(1)
-                    .tabItem {
-                        Image.Icons.tunes
-                    }
-                
-                UserView(viewModel: dashboardViewModel)
-                    .tag(2)
-                    .tabItem {
-                        Image.Icons.user
-                    }
-                HealthView(viewModel: dashboardViewModel)
-                    .tag(3)
-                    .tabItem {
-                        Image.Icons.caduceus
-                    }
-            }
-            .accentColor(Color.white)
+                TabView {
+                    DashboardView(viewModel: dashboardViewModel)
+                        .tag(0)
+                        .tabItem {
+                            Image.Icons.logo
+                        }
+                    PlayerView(viewModel: dashboardViewModel)
+                        .tag(1)
+                        .tabItem {
+                            Image.Icons.tunes
+                        }
+                    
+                    UserView(viewModel: dashboardViewModel)
+                        .tag(2)
+                        .tabItem {
+                            Image.Icons.user
+                        }
+                    HealthView(viewModel: dashboardViewModel)
+                        .tag(3)
+                        .tabItem {
+                            Image.Icons.caduceus
+                        }
+                    EmotionStatView(viewModel: dashboardViewModel)
+                        .tag(4)
+                        .tabItem {
+                            Image(systemName: "chart.bar.doc.horizontal")
+                        }
+                }
+                .accentColor(Color.white)
             }
         }
     }
@@ -57,6 +62,6 @@ struct DashboardTabView: View {
             UITabBar.appearance().scrollEdgeAppearance = appeareance
         }
         UITabBar.appearance().standardAppearance = appeareance
-
+        
     }
 }

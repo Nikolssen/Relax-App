@@ -18,7 +18,7 @@ class AuthorizationViewModel: ObservableObject {
     init(service: Service, coordinator: Coordinator) {
         self.service = service
         self.coordinator = coordinator
-
+        
     }
     
     func signIn() {

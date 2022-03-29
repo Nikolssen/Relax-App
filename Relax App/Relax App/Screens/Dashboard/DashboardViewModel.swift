@@ -39,7 +39,11 @@ class DashboardViewModel: ObservableObject {
     var currentSong: Int = 0
     @Published var isPlaying = false
     var player: AVAudioPlayer?
-    
+    var emotions: [(Double, Emotion)] {
+        let dict = Dictionary(grouping: user.emotions, by: { $0.1 })
+        let array = Array(dict).map { key, value in (Double(value.count), key)}
+        return array.sorted { $0.0 > $1.0 }
+    }
     var forecast: String?
     let user: User
     let service: Service
@@ -141,7 +145,7 @@ class DashboardViewModel: ObservableObject {
             catch {
                 
             }
-
+            
             player = try? AVAudioPlayer(contentsOf: songURLs[currentSong])
             player?.play()
             isPlaying = true

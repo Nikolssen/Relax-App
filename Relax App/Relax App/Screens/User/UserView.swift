@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserView: View {
-
+    
     @StateObject var viewModel: DashboardViewModel
     @State var showSheet: Bool = false
     @State var showPicker: Bool = false
@@ -20,61 +20,61 @@ struct UserView: View {
             VStack(alignment: .center, spacing: 5) {
                 
                 if let image = viewModel.user.image {
-                        Image(uiImage: image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .clipShape(Circle())
-                            .onTapGesture {
-                                showSheet = true
-                            }
-                            .sheet(isPresented: $showSheet) {
-                                ImagePicker(selectedImage: $viewModel.userImage)
-                            }
-                    }
-                    else {
-                        Color.gray
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .clipShape(Circle())
-                            .onTapGesture {
-                                showSheet = true
-                            }
-                            .sheet(isPresented: $showSheet) {
-                                ImagePicker(selectedImage: $viewModel.userImage)
-                            }
-                    }
-                    
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 150, height: 150, alignment: .center)
+                        .clipShape(Circle())
+                        .onTapGesture {
+                            showSheet = true
+                        }
+                        .sheet(isPresented: $showSheet) {
+                            ImagePicker(selectedImage: $viewModel.userImage)
+                        }
+                }
+                else {
+                    Color.gray
+                        .frame(width: 150, height: 150, alignment: .center)
+                        .clipShape(Circle())
+                        .onTapGesture {
+                            showSheet = true
+                        }
+                        .sheet(isPresented: $showSheet) {
+                            ImagePicker(selectedImage: $viewModel.userImage)
+                        }
+                }
+                
                 
                 Text(viewModel.name)
                     .foregroundColor(.white)
                     .font(.alegreyaMedium(size: 35))
                 ScrollView {
-                HStack(alignment: .top) {
-                    Moodlet(mood: viewModel.sign, isSelected: false)
-                    VStack {
-                        Text("This horoscope is for you today:")
-                        Text(viewModel.forecast ?? "")
+                    HStack(alignment: .top) {
+                        Moodlet(mood: viewModel.sign, isSelected: false)
+                        VStack {
+                            Text("This horoscope is for you today:")
+                            Text(viewModel.forecast ?? "")
+                        }
+                        .foregroundColor(.white)
+                        .font(.alegreyaSansRegular(size: 18))
+                        
                     }
-                    .foregroundColor(.white)
-                    .font(.alegreyaSansRegular(size: 18))
-
-                }
-                .padding(.horizontal)
-                
+                    .padding(.horizontal)
+                    
                     LazyVGrid(columns: [GridItem(.flexible(minimum: 40)),
-                    GridItem(.flexible(minimum: 40))], alignment: .center, spacing: 30, pinnedViews: []) {
+                                        GridItem(.flexible(minimum: 40))], alignment: .center, spacing: 30, pinnedViews: []) {
                         ForEach(viewModel.user.images, id: \.1) {
                             ImageCell(image: Image(uiImage: $0.0), description: $0.1.time)
                         }
                         ImageAdditionCell()
                             .onTapGesture {
-                               showPicker = true
+                                showPicker = true
                             }
                             .sheet(isPresented: $showPicker) {
                                 ImagePicker(selectedImage: $viewModel.newImage)
                             }
                     }
-                    .padding(.horizontal, 10)
+                                        .padding(.horizontal, 10)
                 }
             }
             

@@ -16,11 +16,11 @@ struct ImageCell: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
             HStack{
-            Text(description)
-                .foregroundColor(.white)
-                .font(.alegreyaSansMedium(size: 18))
-                .padding(.top, 60)
-                .padding(.horizontal, 20)
+                Text(description)
+                    .foregroundColor(.white)
+                    .font(.alegreyaSansMedium(size: 18))
+                    .padding(.top, 60)
+                    .padding(.horizontal, 20)
                 Spacer()
             }
         }

@@ -10,10 +10,11 @@ import SwiftUI
 struct DashboardView: View {
     @StateObject var viewModel: DashboardViewModel
     @State var showSheet: Bool = false
-
+    
     var body: some View {
         ZStack {
-            Color.outerSpace
+            Image.Backgrounds.jungles
+                .resizable()
                 .ignoresSafeArea()
             VStack {
                 
@@ -40,7 +41,7 @@ struct DashboardView: View {
                                     viewModel.advice = advice
                                     self.showSheet = true
                                 })
-                                    
+                                
                             }
                         }
                         .sheet(isPresented: $showSheet, onDismiss: { viewModel.advice = nil }) {
@@ -53,7 +54,7 @@ struct DashboardView: View {
                         }
                     }
                 }
-
+                
             }
         }
     }

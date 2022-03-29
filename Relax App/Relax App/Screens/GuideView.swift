@@ -34,7 +34,7 @@ struct GuideView: View {
             }
             .tabViewStyle(.page)
         }
-
+        
     }
 }
 

@@ -12,14 +12,14 @@ struct AuthorView: View {
         ZStack {
             Color.outerSpace
                 .ignoresSafeArea()
-        VStack {
-        Text("Lab 3")
-        Text("Budovich Ivan, group 951002")
-        Text("BSUIR")
+            VStack {
+                Text("Lab 3")
+                Text("Budovich Ivan, group 951002")
+                Text("BSUIR")
+            }
+            .font(.alegreyaSansMedium(size: 30))
+            .foregroundColor(.white)
         }
-        .font(.alegreyaSansMedium(size: 30))
-        .foregroundColor(.white)
-    }
     }
 }
 

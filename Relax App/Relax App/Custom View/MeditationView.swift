@@ -14,24 +14,24 @@ struct MeditationView: View {
         ZStack {
             Color.springWood
             HStack {
-            VStack {
-                Text(advice.title)
-                    .font(.alegreyaMedium(size: 25))
-                    .foregroundColor(.gray)
-                    .lineLimit(2)
-                Text(advice.shortDescription)
-                    .font(.alegreyaSansMedium(size: 14))
-                    .foregroundColor(.gray)
-                Button(action: action) {
-                    Text("More...")
-                        .font(Font.alegreyaSansMedium(size: 15))
-                        .foregroundColor(Color.white)
-                        .frame(maxWidth: 100, maxHeight: 35, alignment: .center)
+                VStack {
+                    Text(advice.title)
+                        .font(.alegreyaMedium(size: 25))
+                        .foregroundColor(.gray)
+                        .lineLimit(2)
+                    Text(advice.shortDescription)
+                        .font(.alegreyaSansMedium(size: 14))
+                        .foregroundColor(.gray)
+                    Button(action: action) {
+                        Text("More...")
+                            .font(Font.alegreyaSansMedium(size: 15))
+                            .foregroundColor(Color.white)
+                            .frame(maxWidth: 100, maxHeight: 35, alignment: .center)
+                    }
+                    .background(Color.outerSpace)
+                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                 }
-                .background(Color.outerSpace)
-                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-            }
-            .padding()
+                .padding()
                 advice.image
                     .resizable()
                     .aspectRatio(contentMode: .fit)

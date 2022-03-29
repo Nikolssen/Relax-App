@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HealthView: View {
-
+    
     @StateObject var viewModel: DashboardViewModel
     var body: some View {
         ZStack {
@@ -26,7 +26,7 @@ struct HealthView: View {
                 Button("Calculate", action: { viewModel.calculateBMI() })
                     .font(.alegreyaSansRegular(size: 20))
                     .foregroundColor(.grannySmith)
-               
+                
                 Text(viewModel.bmi)
                     .foregroundColor(.white)
                     .font(.alegreyaMedium(size: 20))
