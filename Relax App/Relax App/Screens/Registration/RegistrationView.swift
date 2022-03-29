@@ -46,6 +46,9 @@ struct RegistrationView: View {
                 
                 Spacer()
             }
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(title: Text("Warning!"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("Ok")))
+            }
             .padding(.horizontal, 30)
             .ignoresSafeArea(.keyboard)
             
@@ -54,6 +57,7 @@ struct RegistrationView: View {
                 
             }
         }
+        
     }
     private enum Constants {
         static let registration = "Register"
@@ -62,10 +66,5 @@ struct RegistrationView: View {
         static let namePlaceholder = "Name"
         static let registerTitle = "Register"
         static let birthDateTitle = "Birth Date"
-        static let emailEmptyMessage = "E-mail is empty"
-        static let nameEmptyMessage = "Name is empty"
-        static let passwordMessage = "Password is empty"
-        static let passwordShortMessage = "Password must containt at least 6 characters"
-        static let dateFutureMessage = "Birth date must not be in future!"
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AuthorizationView: View {
     @StateObject var viewModel: AuthorizationViewModel
+
     var body: some View {
         ZStack {
             Image.Backgrounds.jungles
@@ -48,6 +49,9 @@ struct AuthorizationView: View {
             if viewModel.showSpinner {
                 ActivityView()
             }
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Warning!"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("Ok")))
         }
         
         
