@@ -11,6 +11,7 @@ struct OnboardingView: View {
     
     var registrationAction: () -> Void
     var authorizationAction: () -> Void
+    var guideAction: () -> Void
     
     var body: some View {
         ZStack {
@@ -40,6 +41,9 @@ struct OnboardingView: View {
                 Button(Constants.registerTitle, action: registrationAction)
                     .foregroundColor(Color.white)
                     .font(Font.alegreyaSansMedium(size: 18))
+                Button(Constants.guideTitle, action: guideAction)
+                    .foregroundColor(Color.white)
+                    .font(Font.alegreyaSansMedium(size: 18))
             }
             
         }
@@ -52,6 +56,7 @@ struct OnboardingView: View {
         static let thirdLineTitle = "Do your job well"
         static let buttonTitle = "Sign in"
         static let registerTitle = "Don't have account yet? Register now!"
+        static let guideTitle = "More about app..."
     }
 }
 

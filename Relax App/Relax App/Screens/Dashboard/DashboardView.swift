@@ -10,7 +10,7 @@ import SwiftUI
 struct DashboardView: View {
     @StateObject var viewModel: DashboardViewModel
     @State var showSheet: Bool = false
-    @State var advice: MeditationAdvice?
+
     var body: some View {
         ZStack {
             Color.outerSpace
@@ -37,14 +37,14 @@ struct DashboardView: View {
                         LazyVGrid(columns: [.init(.flexible(minimum: 100, maximum: .infinity), spacing: 20, alignment: .center)]) {
                             ForEach(piecesOfAdvice, id: \.title) { advice in
                                 MeditationView(advice: advice, action: {
-                                    self.advice = advice
+                                    viewModel.advice = advice
                                     self.showSheet = true
                                 })
                                     
                             }
                         }
-                        .sheet(isPresented: $showSheet, onDismiss: { self.advice = nil }) {
-                            if let advice = advice {
+                        .sheet(isPresented: $showSheet, onDismiss: { viewModel.advice = nil }) {
+                            if let advice = viewModel.advice {
                                 MediationDetailsView(advice: advice)
                             }
                             else {

@@ -61,6 +61,7 @@
 		3FFA5F8E27BC3DF00091C531 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5F8D27BC3DF00091C531 /* Emotion.swift */; };
 		3FFA5F9227BC42CE0091C531 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5F9127BC42CE0091C531 /* DashboardView.swift */; };
 		3FFDCF5227C37C6200A73EFC /* DashboardTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */; };
+		3FFF78CD27F3122D0011EFCD /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF78CC27F3122D0011EFCD /* ImageViewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -129,6 +130,7 @@
 		3FFA5F8D27BC3DF00091C531 /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		3FFA5F9127BC42CE0091C531 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		3FFDCF5127C37C6200A73EFC /* DashboardTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabView.swift; sourceTree = "<group>"; };
+		3FFF78CC27F3122D0011EFCD /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				3F583FFF27C7775900015D46 /* ImageAdditionCell.swift */,
 				3F653DFF27C8C8A00062B260 /* MediationDetailsView.swift */,
 				3F58BEAB27F1A8FB005BF693 /* ActivityView.swift */,
+				3FFF78CC27F3122D0011EFCD /* ImageViewer.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				3FBE85C427F2565A003ED3F6 /* BarChartView.swift in Sources */,
 				3F52E95927B9736C00637ABF /* AuthTextField.swift in Sources */,
 				3F989D9727CBEA8800632EDD /* AuthorView.swift in Sources */,
+				3FFF78CD27F3122D0011EFCD /* ImageViewer.swift in Sources */,
 				3F28A8DD27C54E53007ED45A /* NavigationBar.swift in Sources */,
 				3F5CF3DA27BE558900C95E39 /* MoodletRepresentable.swift in Sources */,
 				3F5CF3DF27BE5FF700C95E39 /* MediationAdvice.swift in Sources */,

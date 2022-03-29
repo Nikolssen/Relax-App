@@ -18,6 +18,8 @@ final class Coordinator {
             self?.goToRegistration()
         }, authorizationAction: { [weak self] in
             self?.goToAuthorization()
+        }, guideAction: { [weak self] in
+            self?.showGuide()
         }))
         return onboardingController
     }
@@ -69,5 +71,11 @@ final class Coordinator {
         baseController.setViewControllers([onBoardingController], animated: false)
         self.baseController = baseController
         window.rootViewController = baseController
+    }
+    
+    func showGuide() {
+        let controller = UIHostingController<GuideView>(rootView: GuideView())
+        guard let baseController = baseController as? UINavigationController else { return }
+        baseController.pushViewController(controller, animated: true)
     }
 }

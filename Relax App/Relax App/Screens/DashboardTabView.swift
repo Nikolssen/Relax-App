@@ -13,7 +13,7 @@ struct DashboardTabView: View {
         ZStack {
             Color.outerSpace.ignoresSafeArea()
             VStack {
-            NavigationBar()
+                NavigationBar(exitAction: { dashboardViewModel.logout() })
             TabView {
                 DashboardView(viewModel: dashboardViewModel)
                     .tag(0)
@@ -35,11 +35,6 @@ struct DashboardTabView: View {
                     .tag(3)
                     .tabItem {
                         Image.Icons.caduceus
-                    }
-                AuthorView()
-                    .tag(4)
-                    .tabItem {
-                        Image.Icons.misc
                     }
             }
             .accentColor(Color.white)

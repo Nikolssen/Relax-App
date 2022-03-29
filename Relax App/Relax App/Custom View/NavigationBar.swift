@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    var exitAction: () -> Void
     var body: some View {
         HStack {
             Image.hamburger
@@ -21,17 +22,14 @@ struct NavigationBar: View {
                 .frame(width: 48, height: 48, alignment: .center)
                 .foregroundColor(.white)
             Spacer()
-            Image.Icons.user
-                .resizable()
-                .frame(width: 36, height: 36, alignment: .center)
-                .clipShape(Circle())
+            Text("exit")
+                .font(.alegreyaMedium(size: 14))
+                .foregroundColor(.white)
+                .onTapGesture {
+                    exitAction()
+                }
         }
         .padding(.horizontal)
     }
 }
 
-struct NavigationBar_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationBar()
-    }
-}

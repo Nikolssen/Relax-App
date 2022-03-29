@@ -19,6 +19,7 @@ class DashboardViewModel: ObservableObject {
     var sign: HoroscopeSign {
         user.sign
     }
+    var advice: MeditationAdvice?
     
     @Published var weight: String
     @Published var height: String
