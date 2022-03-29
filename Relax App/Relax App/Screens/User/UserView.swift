@@ -22,6 +22,7 @@ struct UserView: View {
                 if let image = viewModel.user.image {
                         Image(uiImage: image)
                             .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(width: 150, height: 150, alignment: .center)
                             .clipShape(Circle())
                             .onTapGesture {

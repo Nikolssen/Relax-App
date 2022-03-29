@@ -97,6 +97,7 @@ final class FirebaseService {
         guard let data = image.jpegData(compressionQuality: 0.5) else { return }
         let reference = Storage.storage().reference().child(user.uid).child("avatar.jpeg")
         reference.putData(data).resume()
+        user.image = image
         
     }
     

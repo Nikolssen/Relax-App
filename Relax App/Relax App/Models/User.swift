@@ -8,31 +8,6 @@ import Foundation
 import Combine
 import SwiftUI
 
-//class User: ObservableObject {
-//
-//    let name: String
-//    let email: String
-//    let birthdayDate: Date
-//    @Published var image: Image?
-//    @Published var images: [(Image, String, Date)] = []
-//    lazy var sign: HoroscopeSign = {
-//        birthdayDate.zodiacSign
-//    }()
-//    @Published var emotion: Emotion?
-//    var emotions: [(Date, Emotion)] = []
-//    var height: Float?
-//    var weight: Float?
-//    
-//    init(name: String, email: String, birthdayDate: Date, image: Image? = nil, images: [Image] = []) {
-//        self.name = name
-//        self.email = email
-//        self.birthdayDate = birthdayDate
-//        self.image = image
-//        //self.images = images
-//    }
-//    
-//}
-
 class User {
 
     let name: String

@@ -18,8 +18,10 @@ class DashboardViewModel: ObservableObject {
     var sign: HoroscopeSign {
         user.sign
     }
-    @Published var newImage: UIImage = UIImage()
-    @Published var userImage: UIImage = UIImage()
+    
+    
+    @Published var newImage: UIImage
+    @Published var userImage: UIImage
     
     var forecast: String?
     var user: User
@@ -29,7 +31,8 @@ class DashboardViewModel: ObservableObject {
     init(user: User, service: Service) {
         self.user = user
         self.service = service
-        
+        newImage = UIImage()
+        userImage = UIImage()
         emotion = user.emotion ?? user.emotions.sorted(by: { $0.0 < $1.0 }).first?.1
         
         $emotion
@@ -49,7 +52,7 @@ class DashboardViewModel: ObservableObject {
                 
                 Task {
                     await self.service.firebaseService.update(image: image, user: self.user)
-                    self.user.image = image
+                    
                     await MainActor.run {
                         self.objectWillChange.send()
                     }
